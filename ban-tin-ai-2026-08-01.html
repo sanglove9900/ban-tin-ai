@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin AI — 01/08/2026</title>
+<style>
+  :root{
+    --blue-900:#0a2a5e; --blue-700:#0f4fbd; --blue-50:#eaf1ff;
+    --yellow:#ffcc00; --yellow-dk:#8a6a00; --yellow-bg:#fff8dc;
+    --ink:#111827; --ink-2:#374151; --muted:#6b7280;
+    --line:#e5e7eb; --bg:#f6f8fb; --card:#fff;
+    --green:#0b7a3f; --green-bg:#e7f5ec;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.5}
+  .wrap{max-width:780px;margin:0 auto;padding:0 18px 60px}
+
+  header{background:var(--blue-900);color:#fff;padding:22px 0 18px;border-bottom:4px solid var(--yellow)}
+  header .wrap{padding-bottom:0}
+  .kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);font-weight:800}
+  h1{margin:5px 0 3px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em}
+  .sub{margin:0;font-size:13px;color:#a8c4f0}
+
+  /* TL;DR */
+  .tldr{background:var(--yellow-bg);border-left:4px solid var(--yellow);border-radius:0 10px 10px 0;
+    padding:14px 16px;margin:20px 0 26px}
+  .tldr h2{margin:0 0 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow-dk);font-weight:800}
+  .tldr ol{margin:0;padding-left:19px}
+  .tldr li{margin-bottom:6px;font-size:15px;line-height:1.45}
+  .tldr li:last-child{margin-bottom:0}
+  .tldr b{color:var(--blue-900)}
+
+  /* Section */
+  section{margin-bottom:30px}
+  .sec-head{display:flex;align-items:center;gap:9px;margin:0 0 4px}
+  .sec-num{background:var(--blue-700);color:#fff;width:22px;height:22px;border-radius:6px;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex:none}
+  .sec-head h2{margin:0;font-size:17px;font-weight:800;color:var(--blue-900);letter-spacing:-.01em}
+  .sec-sub{margin:0 0 10px 31px;font-size:12.5px;color:var(--muted)}
+
+  /* Row */
+  .row{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line);
+    border-radius:8px;padding:11px 14px;margin-bottom:8px}
+  .row.p1{border-left-color:var(--yellow);background:#fffdf5}
+  .row.p3{opacity:.82}
+  .r-head{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap}
+  .r-head .t{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.35;flex:1;min-width:200px}
+  .r-head .t a{color:var(--blue-900);text-decoration:none}
+  .r-head .t a:hover{text-decoration:underline}
+  .pill{font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:3px 7px;border-radius:5px;
+    white-space:nowrap;flex:none;text-transform:uppercase}
+  .pill.src{background:var(--blue-50);color:var(--blue-700)}
+  .pill.now{background:var(--yellow);color:#3d2f00}
+  .pill.ok{background:var(--green-bg);color:var(--green)}
+  .pill.no{background:#f1f3f5;color:var(--muted)}
+  .r-sum{margin:5px 0 0;font-size:14px;color:var(--ink-2);line-height:1.45}
+  .r-act{margin:6px 0 0;font-size:14px;font-weight:600;color:var(--blue-700);line-height:1.45}
+  .r-act.skip{color:var(--muted);font-weight:500}
+  .r-meta{font-size:11.5px;color:var(--muted);margin-top:4px}
+
+  .grp{display:flex;align-items:center;gap:8px;margin:16px 0 7px;font-size:11.5px;font-weight:800;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .grp::after{content:"";flex:1;height:1px;background:var(--line)}
+  .fine{font-size:12px;color:var(--muted);line-height:1.5;margin:10px 0 0 2px}
+  footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6}
+  footer a{color:var(--blue-700)}
+  @media(max-width:520px){
+    body{font-size:15px} h1{font-size:20px}
+    .r-head .t{min-width:100%} .wrap{padding:0 14px 48px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">BẢN TIN AI HẰNG NGÀY</div>
+    <h1>Thứ Bảy, 01/08/2026</h1>
+    <p class="sub">15 tin nổi bật · đọc lướt 2 phút · dấu vàng = nên xem ngay</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="tldr">
+    <h2>3 điều đáng nhớ hôm nay</h2>
+    <ol>
+      <li><b>Gemini Robotics 2</b> ra mắt (30/07) — đột phá AI điều khiển robot humanoid đa nhiệm.</li>
+      <li><b>Gemini 3.6 Flash</b> & <b>Claude Opus 5</b> — 2 model tối ưu chi phí cực mạnh cho các luồng automation.</li>
+      <li><b>WyckoffTradingAgent</b> & <b>Gifted87 TradingBot</b> — combo agent tự phân tích nến-volume theo Wyckoff & SMC.</li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">1</div><h2>Tính năng mới của các AI lớn</h2></div>
+    <p class="sec-sub">Claude · OpenAI · Gemini Robotics 2 · Gemini 3.6 Flash</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">Gemini</span>
+        <div class="t">Gemini Robotics 2 chính thức ra mắt (30/07)</div>
+        <span class="pill now">MỚI NẤT</span>
+      </div>
+      <p class="r-sum">Model vision-language-action mới nhất của Google DeepMind giúp robot dạng người tự di chuyển và thao tác khéo léo.</p>
+      <p class="r-act">→ Bước tiến lớn cho tự động hoá vật lý & điều khiển thiết bị thông minh trong tương lai.</p>
+    </div>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">Claude</span>
+        <div class="t">Claude Opus 5 ra mắt — frontier AI với chi phí giảm 50%</div>
+        <span class="pill now">HOT</span>
+      </div>
+      <p class="r-sum">Phiên bản Opus 5 tối ưu hóa tốc độ phản hồi và chi phí API, nâng cấp mạnh mẽ khả năng gọi tool.</p>
+      <p class="r-act">→ Thích hợp để chuyển đổi các agent tự động hoá phức tạp sang model này để tiết kiệm chi phí.</p>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">Gemini</span>
+        <div class="t">Gemini 3.6 Flash & 3.5 Flash-Lite sẵn sàng production</div>
+        <span class="r-meta">21/07</span>
+      </div>
+      <p class="r-act">→ Tốc độ phản hồi cực nhanh, dùng làm backbone tốt cho các tác vụ crawl tin tức và phân loại dữ liệu.</p>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">OpenAI</span>
+        <div class="t">Mở rộng triển khai GPT-5.6 cho Microsoft 365 Copilot</div>
+        <span class="r-meta">09/07</span>
+      </div>
+      <p class="r-act">→ Tích hợp sâu vào công cụ văn phòng Word, Excel, PowerPoint.</p>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">2</div><h2>Repo GitHub hot trong tuần</h2></div>
+    <p class="sec-sub">AI Agent Frameworks · Security · Coding Assistants</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill now">Dùng ngay</span>
+        <div class="t"><a href="https://github.com/usestrix/strix">strix</a></div>
+        <span class="r-meta">AI Pentest Agent</span>
+      </div>
+      <p class="r-sum">Agent AI tự động kiểm thử an ninh mạng và phát hiện lỗ hổng hệ thống.</p>
+      <p class="r-act">→ Tham khảo cơ chế tự đánh giá an toàn thông tin khi dựng các API public.</p>
+    </div>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill now">Dùng ngay</span>
+        <div class="t"><a href="https://github.com/xai-org/grok-build">grok-build</a></div>
+        <span class="r-meta">xAI Official</span>
+      </div>
+      <p class="r-sum">CLI agent lập trình mã nguồn mở từ xAI tích hợp sẵn chuẩn MCP (Model Context Protocol).</p>
+      <p class="r-act">→ Thêm lựa chọn agent CLI chạy song song với Claude Code.</p>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">Đáng thử</span>
+        <div class="t"><a href="https://github.com/HKUDS/Vibe-Trading">Vibe-Trading</a></div>
+        <span class="r-meta">HKUDS</span>
+      </div>
+      <p class="r-sum">Dịch câu lệnh ngôn ngữ tự nhiên thành kịch bản backtest giao dịch.</p>
+      <p class="r-act">→ Tiện lợi để thử nhanh các ý tưởng chiến lược trading bằng câu nói.</p>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">3</div><h2>Mạng xã hội &amp; Video</h2></div>
+    <p class="sec-sub">YouTube · X · Community Trends</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill ok">Nên xem</span>
+        <div class="t">Bản tin công nghệ: Agentic AI và xu hướng bảo mật 2026</div>
+      </div>
+      <p class="r-sum">Phân tích chuyển dịch từ Chatbot thông thường sang AI Agent thực thi đa bước.</p>
+      <p class="r-act">→ Giúp định hình kiến trúc làm việc tự động hằng ngày.</p>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">4</div><h2>Chứng khoán · Trading</h2></div>
+    <p class="sec-sub">Wyckoff / VSA / Smart Money Concepts (SMC)</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill now">Sát nhất</span>
+        <div class="t"><a href="https://github.com/YoungCan-Wang/WyckoffTradingAgent">WyckoffTradingAgent</a></div>
+        <span class="r-meta">Python · Open Source</span>
+      </div>
+      <p class="r-sum">Agent phân tích kỹ thuật theo giá-khối lượng (VSA) bám sát lý thuyết Wyckoff.</p>
+      <p class="r-act">→ Tham khảo cách tách các phase Wyckoff tự động qua Python.</p>
+    </div>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill now">Đáng xem</span>
+        <div class="t"><a href="https://github.com/Gifted87/TradingBot">Gifted87/TradingBot</a></div>
+        <span class="r-meta">Gemini AI Agent</span>
+      </div>
+      <p class="r-sum">Multi-agent bot kết hợp Gemini AI để quét tín hiệu SMC và Wyckoff.</p>
+      <p class="r-act">→ Đọc phần prompt engineering thiết lập quy tắc nhận diện No Demand / Supply.</p>
+    </div>
+  </section>
+
+  <footer>
+    Bản tin tự động · 08:00 hằng ngày (giờ VN) · Hệ thống Bản tin AI
+  </footer>
+
+</div>
+</body>
+</html>
