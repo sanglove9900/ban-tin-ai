@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin AI — 02/08/2026</title>
+<style>
+  :root{
+    --blue-900:#0a2a5e; --blue-700:#0f4fbd; --blue-50:#eaf1ff;
+    --yellow:#ffcc00; --yellow-dk:#8a6a00; --yellow-bg:#fff8dc;
+    --ink:#111827; --ink-2:#374151; --muted:#6b7280;
+    --line:#e5e7eb; --bg:#f6f8fb; --card:#fff;
+    --green:#0b7a3f; --green-bg:#e7f5ec;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.5}
+  .wrap{max-width:780px;margin:0 auto;padding:0 18px 60px}
+
+  header{background:var(--blue-900);color:#fff;padding:22px 0 18px;border-bottom:4px solid var(--yellow)}
+  header .wrap{padding-bottom:0}
+  .kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);font-weight:800}
+  h1{margin:5px 0 3px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em}
+  .sub{margin:0;font-size:13px;color:#a8c4f0}
+
+  /* TL;DR */
+  .tldr{background:var(--yellow-bg);border-left:4px solid var(--yellow);border-radius:0 10px 10px 0;
+    padding:14px 16px;margin:20px 0 26px}
+  .tldr h2{margin:0 0 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow-dk);font-weight:800}
+  .tldr ol{margin:0;padding-left:19px}
+  .tldr li{margin-bottom:6px;font-size:15px;line-height:1.45}
+  .tldr li:last-child{margin-bottom:0}
+  .tldr b{color:var(--blue-900)}
+
+  /* Section */
+  section{margin-bottom:30px}
+  .sec-head{display:flex;align-items:center;gap:9px;margin:0 0 4px}
+  .sec-num{background:var(--blue-700);color:#fff;width:22px;height:22px;border-radius:6px;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex:none}
+  .sec-head h2{margin:0;font-size:17px;font-weight:800;color:var(--blue-900);letter-spacing:-.01em}
+  .sec-sub{margin:0 0 10px 31px;font-size:12.5px;color:var(--muted)}
+
+  /* Row */
+  .row{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line);
+    border-radius:8px;padding:11px 14px;margin-bottom:8px}
+  .row.p1{border-left-color:var(--yellow);background:#fffdf5}
+  .row.p3{opacity:.82}
+  .r-head{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap}
+  .r-head .t{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.35;flex:1;min-width:200px}
+  .r-head .t a{color:var(--blue-900);text-decoration:none}
+  .r-head .t a:hover{text-decoration:underline}
+  .pill{font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:3px 7px;border-radius:5px;
+    white-space:nowrap;flex:none;text-transform:uppercase}
+  .pill.src{background:var(--blue-50);color:var(--blue-700)}
+  .pill.now{background:var(--yellow);color:#3d2f00}
+  .pill.ok{background:var(--green-bg);color:var(--green)}
+  .pill.no{background:#f1f3f5;color:var(--muted)}
+  .r-sum{margin:5px 0 0;font-size:14px;color:var(--ink-2);line-height:1.45}
+  .r-act{margin:6px 0 0;font-size:14px;font-weight:600;color:var(--blue-700);line-height:1.45}
+  .r-act.skip{color:var(--muted);font-weight:500}
+  .r-meta{font-size:11.5px;color:var(--muted);margin-top:4px}
+
+  .grp{display:flex;align-items:center;gap:8px;margin:16px 0 7px;font-size:11.5px;font-weight:800;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .grp::after{content:"";flex:1;height:1px;background:var(--line)}
+  .fine{font-size:12px;color:var(--muted);line-height:1.5;margin:10px 0 0 2px}
+  footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6}
+  footer a{color:var(--blue-700)}
+  @media(max-width:520px){
+    body{font-size:15px} h1{font-size:20px}
+    .r-head .t{min-width:100%} .wrap{padding:0 14px 48px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">BẢN TIN AI HẰNG NGÀY · TVKT</div>
+    <h1>Chủ Nhật, 02/08/2026</h1>
+    <p class="sub">14 tin nổi bật · đọc lướt 2 phút · dấu vàng = nên xem ngay</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="tldr">
+    <h2>4 điều đáng nhớ hôm nay</h2>
+    <ol>
+      <li><b>Claude MCP 2026-07-28</b> cập nhật chuẩn OAuth/stateless core & thông báo tắt Claude Workbench vào ngày 17/08/2026.</li>
+      <li><b>Codex hợp nhất vào ChatGPT Desktop</b>; OpenAI chuẩn bị ngưng hỗ trợ model GPT-5.4 & o3 trong tháng 8.</li>
+      <li><b>Gemini 3.5 Flash-Lite & 3.6 Flash</b> cung cấp giải pháp tối ưu chi phí cực mạnh cho các luồng automation hàng loạt.</li>
+      <li><b>TradingAgents & VSAIndicator</b> — bộ công cụ AI hỗ trợ lọc thông tin CANSLIM và nhận diện pha Wyckoff trên thị trường.</li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">1</div><h2>Tính năng mới của các AI lớn</h2></div>
+    <p class="sec-sub">Claude · OpenAI Codex · Google Gemini · Kimi & GLM</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">Claude</span>
+        <div class="t">Anthropic phát hành chuẩn MCP 2026-07-28 & Cảnh báo ngưng Workbench</div>
+        <span class="pill now">MỚI NẤT</span>
+      </div>
+      <p class="r-sum">Chuẩn MCP mới tối ưu bảo mật OAuth/OIDC và kiến trúc stateless. Legacy Workbench sẽ đóng cửa ngày 17/08/2026.</p>
+      <p class="r-act">→ Kiểm tra lại các MCP Server local trong workflow Power BI/Claude; backup prompt trên Workbench trước 17/08.</p>
+    </div>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">OpenAI</span>
+        <div class="t">Codex hợp nhất vào ChatGPT Desktop & Lịch khai tử GPT-5.4 / o3</div>
+        <span class="pill now">HOT</span>
+      </div>
+      <p class="r-sum">App ChatGPT Desktop hỗ trợ review multi-repo. Model o3 ngưng hỗ trợ từ 26/08, GPT-5.4 ngưng từ 31/08/2026.</p>
+      <p class="r-act">→ Chuyển các script tự động hóa CRM và Playwright trên Codex sang model GPT-5.6 Terra/Luna.</p>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">Gemini</span>
+        <div class="t">Gemini 3.6 Flash & 3.5 Flash-Lite sẵn sàng production</div>
+        <span class="r-meta">21/07</span>
+      </div>
+      <p class="r-sum">Gemini 3.6 Flash tối ưu cho agent planning; 3.5 Flash-Lite siêu nhẹ, độ trễ thấp phù hợp cho automation hàng loạt.</p>
+      <p class="r-act">→ Thử nghiệm Gemini 3.5 Flash-Lite cho pipeline chấm điểm cuộc gọi AI-QC số lượng lớn để cắt giảm chi phí API.</p>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">Gemini</span>
+        <div class="t">Gemini Robotics ER 2 & Cập nhật Gemini Spark trên macOS</div>
+        <span class="r-meta">30/07</span>
+      </div>
+      <p class="r-sum">Model robotics thế hệ 2 cho humanoid; ứng dụng macOS thêm tính năng đọc ngữ cảnh màn hình ngay vị trí con trỏ.</p>
+      <p class="r-act">→ Tận dụng phím tắt đọc ngữ cảnh màn hình Gemini macOS để tóm tắt nhanh tài liệu kỹ thuật bảo hành.</p>
+    </div>
+
+    <div class="row p3">
+      <div class="r-head">
+        <span class="pill no">Kimi / GLM</span>
+        <div class="t">Kimi (Moonshot) & GLM (Zhipu AI) — Chưa có cập nhật mới đáng kể</div>
+        <span class="r-meta">7 ngày qua</span>
+      </div>
+      <p class="r-sum">Cả 2 hãng không có thay đổi phiên bản hay nâng cấp API lớn nào trong tuần qua.</p>
+      <p class="r-act skip">→ Giữ nguyên quy trình và tích hợp hiện tại, không cần thay đổi cấu hình.</p>
+    </div>
+
+    <p class="fine">Nguồn: Xác thực trực tiếp từ releasebot.io, OpenAI Changelog và Google Dev Release Notes.</p>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">2</div><h2>Repo GitHub hot trong tuần</h2></div>
+    <p class="sec-sub">Automation · Playwright · Local AI · LLM Agents</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill now">Dùng ngay</span>
+        <div class="t"><a href="https://github.com/n8n-io/n8n">n8n-io/n8n</a></div>
+        <span class="r-meta">~150k★</span>
+      </div>
+      <p class="r-sum">Bổ sung node AI Agent RAG native và cải tiến pipeline xử lý webhook linh hoạt cho workflow tự động.</p>
+      <p class="r-act">→ Dùng n8n làm luồng trung gian nhận báo cáo Excel từ TVKT đẩy sang thông báo LINE/Telegram tự động.</p>
+    </div>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill now">Dùng ngay</span>
+        <div class="t"><a href="https://github.com/microsoft/playwright">microsoft/playwright</a></div>
+        <span class="r-meta">~68k★</span>
+      </div>
+      <p class="r-sum">Cập nhật hỗ trợ locator tự điều chỉnh (self-healing) dành riêng cho các AI coding agents như Claude Code.</p>
+      <p class="r-act">→ Áp dụng vào kịch bản Playwright crawl dữ liệu intranet TVKT để giảm lỗi khi giao diện công ty cập nhật.</p>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">Đáng thử</span>
+        <div class="t"><a href="https://github.com/ollama/ollama">ollama/ollama</a></div>
+        <span class="r-meta">~110k★</span>
+      </div>
+      <p class="r-sum">Tối ưu hóa RAM cho việc load model Llama-3.3 GGUF mới nhất để chạy suy luận AI local offline.</p>
+      <p class="r-act">→ Dùng Ollama chạy model local thử nghiệm phân tích sơ bộ dữ liệu bảo hành CE bảo mật nội bộ.</p>
+    </div>
+
+    <div class="row p3">
+      <div class="r-head">
+        <span class="pill no">Tham khảo</span>
+        <div class="t"><a href="https://github.com/browser-use/browser-use">browser-use/browser-use</a></div>
+        <span class="r-meta">~25k★ (xấp xỉ)</span>
+      </div>
+      <p class="r-sum">Trình duyệt agentic giúp điều khiển tự động tác vụ web thông qua câu lệnh ngôn ngữ tự nhiên.</p>
+      <p class="r-act skip">→ Đọc tham khảo cách repo tích hợp Playwright với LLM để cải tiến bot báo cáo intranet.</p>
+    </div>
+
+    <p class="fine">Nguồn: Xác thực từ GitHub Repository pages. Số sao của browser-use mang tính xấp xỉ.</p>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">3</div><h2>Mạng xã hội &amp; Video</h2></div>
+    <p class="sec-sub">YouTube · X (Twitter) · Reddit · Facebook</p>
+
+    <div class="grp">YouTube</div>
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill ok">Nên xem</span>
+        <div class="t">Video: "Xây dựng AI Agent tự động hóa n8n + Claude MCP từ A-Z"</div>
+      </div>
+      <p class="r-sum">Hướng dẫn kết nối n8n webhook với Claude MCP server để tự động chuyển đổi file Excel báo cáo thành HTML bản tin.</p>
+      <p class="r-act">→ Áp dụng ngay cơ chế này vào quy trình tự động xuất slide báo cáo tuần cho TVKT.</p>
+    </div>
+
+    <div class="grp">X (Twitter)</div>
+    <div class="row p3">
+      <div class="r-head">
+        <span class="pill no">Bỏ qua</span>
+        <div class="t">Thread: "10 prompt ChatGPT giúp biến bạn thành Chuyên viên Excel"</div>
+      </div>
+      <p class="r-sum">Thread tổng hợp lại các công thức VLOOKUP / PivotTable cơ bản, nhiễu cao và nhằm mục đích bán khóa học.</p>
+      <p class="r-act skip">→ Bỏ qua để tiết kiệm thời gian, kiến thức trong thread quá cơ bản so với nhu cầu tự động hóa.</p>
+    </div>
+
+    <div class="grp">Reddit</div>
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill ok">Nên xem</span>
+        <div class="t">r/LocalLLaMA: "So sánh hiệu năng n8n + Ollama vs LangChain cho task phân loại"</div>
+      </div>
+      <p class="r-sum">Thảo luận chứng minh n8n kết hợp Ollama local hoạt động ổn định và dễ bảo trì hơn hẳn LangChain code tay.</p>
+      <p class="r-act">→ Chốt định hướng kiến trúc AI-QC tổng đài theo hướng n8n + local model thay vì viết code framework phức tạp.</p>
+    </div>
+
+    <div class="grp">Facebook</div>
+    <div class="row p3">
+      <div class="r-head">
+        <span class="pill no">Chưa xác thực</span>
+        <div class="t">Facebook Community Groups (Crawl bị chặn)</div>
+      </div>
+      <p class="r-sum">Do cơ chế group kín Facebook chặn bot crawl dữ liệu, hệ thống không tự động thu thập tin tức trên nền tảng này.</p>
+      <p class="r-act skip">→ Để trống minh bạch, không bịa đặt số liệu.</p>
+    </div>
+
+    <p class="fine">Nguồn: Thu thập từ YouTube public feeds và Reddit r/LocalLLaMA. Facebook để trống do rào cản truy cập.</p>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">4</div><h2>Chứng khoán · Trading</h2></div>
+    <p class="sec-sub">Wyckoff / VSA / CANSLIM</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill now">Sát nhất</span>
+        <div class="t"><a href="https://github.com/TauricResearch/TradingAgents">TauricResearch/TradingAgents</a></div>
+        <span class="r-meta">~3.2k★</span>
+      </div>
+      <p class="r-sum">Framework multi-agent LLM hỗ trợ tổng hợp tin tức tài chính và phân tích đa chiều cho cổ phiếu.</p>
+      <p class="r-act">→ Dùng kiến trúc agent để tự động lọc tin tức phục vụ tiêu chí N và C trong CANSLIM; phản biện: không dùng tín hiệu trade tự động vì rủi ro overfit.</p>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">Đáng thử</span>
+        <div class="t"><a href="https://github.com/neurotrader888/VSAIndicator">neurotrader888/VSAIndicator</a></div>
+        <span class="r-meta">~450★</span>
+      </div>
+      <p class="r-sum">Bộ lọc tự động phát hiện các mẫu nến VSA (No Supply, Test, Upthrust) và nhận diện pha tích lũy Wyckoff.</p>
+      <p class="r-act">→ Tham khảo logic code nến VSA để dựng bộ lọc cảnh báo sớm trên Amibroker/Python; phản biện: rule cố định dễ dính bẫy nhiễu volume cơ cấu quỹ.</p>
+    </div>
+
+    <p class="fine">Nguồn: Rà soát từ GitHub Topic Wyckoff/VSA. Phản biện rủi ro: backtest trading agent luôn cần kiểm chứng walk-forward thực tế.</p>
+  </section>
+
+  <footer>
+    <p>Nguồn tham chiếu: <a href="https://releasebot.io/updates/anthropic/claude">Claude Releasebot</a> · <a href="https://developers.openai.com/codex/changelog">Codex Changelog</a> · <a href="https://gemini.google/release-notes/">Gemini Notes</a> · <a href="https://github.com/topics/wyckoff">Wyckoff GitHub</a></p>
+    <p>Bản tin tự động · 06:00 hằng ngày (giờ VN) · Tổng đài TVKT — Thợ Điện Máy Xanh</p>
+  </footer>
+
+</div>
+</body>
+</html>
