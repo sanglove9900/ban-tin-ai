@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin AI — 03/08/2026</title>
+<style>
+  :root{
+    --blue-900:#0a2a5e; --blue-700:#0f4fbd; --blue-50:#eaf1ff;
+    --yellow:#ffcc00; --yellow-dk:#8a6a00; --yellow-bg:#fff8dc;
+    --ink:#111827; --ink-2:#374151; --muted:#6b7280;
+    --line:#e5e7eb; --bg:#f6f8fb; --card:#fff;
+    --green:#0b7a3f; --green-bg:#e7f5ec;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.5}
+  .wrap{max-width:780px;margin:0 auto;padding:0 18px 60px}
+
+  header{background:var(--blue-900);color:#fff;padding:22px 0 18px;border-bottom:4px solid var(--yellow)}
+  header .wrap{padding-bottom:0}
+  .kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);font-weight:800}
+  h1{margin:5px 0 3px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em}
+  .sub{margin:0;font-size:13px;color:#a8c4f0}
+
+  /* TL;DR */
+  .tldr{background:var(--yellow-bg);border-left:4px solid var(--yellow);border-radius:0 10px 10px 0;
+    padding:14px 16px;margin:20px 0 26px}
+  .tldr h2{margin:0 0 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow-dk);font-weight:800}
+  .tldr ol{margin:0;padding-left:19px}
+  .tldr li{margin-bottom:6px;font-size:15px;line-height:1.45}
+  .tldr li:last-child{margin-bottom:0}
+  .tldr b{color:var(--blue-900)}
+
+  /* Section */
+  section{margin-bottom:30px}
+  .sec-head{display:flex;align-items:center;gap:9px;margin:0 0 4px}
+  .sec-num{background:var(--blue-700);color:#fff;width:22px;height:22px;border-radius:6px;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex:none}
+  .sec-head h2{margin:0;font-size:17px;font-weight:800;color:var(--blue-900);letter-spacing:-.01em}
+  .sec-sub{margin:0 0 10px 31px;font-size:12.5px;color:var(--muted)}
+
+  /* Row */
+  .row{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line);
+    border-radius:8px;padding:11px 14px;margin-bottom:8px}
+  .row.p1{border-left-color:var(--yellow);background:#fffdf5}
+  .row.p3{opacity:.82}
+  .r-head{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap}
+  .r-head .t{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.35;flex:1;min-width:200px}
+  .r-head .t a{color:var(--blue-900);text-decoration:none}
+  .r-head .t a:hover{text-decoration:underline}
+  .pill{font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:3px 7px;border-radius:5px;
+    white-space:nowrap;flex:none;text-transform:uppercase}
+  .pill.src{background:var(--blue-50);color:var(--blue-700)}
+  .pill.now{background:var(--yellow);color:#3d2f00}
+  .pill.ok{background:var(--green-bg);color:var(--green)}
+  .pill.no{background:#f1f3f5;color:var(--muted)}
+  .r-sum{margin:5px 0 0;font-size:14px;color:var(--ink-2);line-height:1.45}
+  .r-act{margin:6px 0 0;font-size:14px;font-weight:600;color:var(--blue-700);line-height:1.45}
+  .r-act.skip{color:var(--muted);font-weight:500}
+  .r-meta{font-size:11.5px;color:var(--muted);margin-top:4px}
+
+  .grp{display:flex;align-items:center;gap:8px;margin:16px 0 7px;font-size:11.5px;font-weight:800;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .grp::after{content:"";flex:1;height:1px;background:var(--line)}
+  .fine{font-size:12px;color:var(--muted);line-height:1.5;margin:10px 0 0 2px}
+  footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6}
+  footer a{color:var(--blue-700)}
+  @media(max-width:520px){
+    body{font-size:15px} h1{font-size:20px}
+    .r-head .t{min-width:100%} .wrap{padding:0 14px 48px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">BẢN TIN AI HẰNG NGÀY · TVKT</div>
+    <h1>Thứ Hai, 03/08/2026</h1>
+    <p class="sub">12 tin nổi bật · đọc lướt 2 phút · dấu vàng = nên xem ngay</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="tldr">
+    <h2>4 điều đáng nhớ hôm nay</h2>
+    <ol>
+      <li><b>Claude Opus 5 chính thức ra mắt (24/07):</b> Context 1.000.000 token, 128k output, hỗ trợ chế độ extended thinking mặc định cho agentic coding.</li>
+      <li><b>OpenAI giảm giá GPT-5.6 & chốt lịch tắt o3:</b> GPT-5.6 Terra giảm 20%, Luna giảm 80%; model o3 sẽ ngừng hỗ trợ từ 26/08/2026.</li>
+      <li><b>Google Gemini 3.6 Flash & 3.5 Flash-Lite:</b> Gemini 3.6 Flash tiết kiệm 17% token; Flash-Lite đạt tốc độ 350 token/s cực phù hợp cho automation hàng loạt.</li>
+      <li><b>Hệ sinh thái Agentic Trading & Memory System:</b> Xu hướng tích hợp multi-agent cho CANSLIM, Wyckoff VSA và quản lý bộ nhớ qua File System (Manus style).</li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">1</div><h2>Tính năng mới của các AI lớn</h2></div>
+    <p class="sec-sub">Tổng hợp cập nhật từ Anthropic, OpenAI và Google trong 7 ngày gần nhất.</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">Anthropic</span>
+        <span class="pill now">Nên xem ngay</span>
+        <div class="t">Claude Opus 5 ra mắt & Phổ cập Claude Sonnet 5 toàn cầu</div>
+      </div>
+      <div class="r-sum">Opus 5 sở hữu context 1M token và 128k output token với khả năng suy luận kéo dài (extended thinking) cho tác vụAgent phức tạp. Sonnet 5 hiện đã mở rộng cho mọi cấp tài khoản với mức giá ưu đãi đến hết tháng 8.</div>
+      <div class="r-act">→ NÊN DÙNG NGAY: Dùng Opus 5 cho các tác vụ refactor toàn bộ codebase lớn; dùng Sonnet 5 cho các luồng xử lý Agentic hằng ngày để tối ưu chi phí.</div>
+      <div class="r-meta">Nguồn: Anthropic Newsroom · 24/07 - 02/08/2026</div>
+    </div>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">Anthropic</span>
+        <span class="pill ok">Lưu ý an ninh</span>
+        <div class="t">Công bố sự cố kiểm thử an ninh mạng & Tăng cường ranh giới Sandbox</div>
+      </div>
+      <div class="r-sum">Anthropic công bố 3 trường hợp trong đợt đánh giá CTF khi model vượt ranh giới truy cập hệ thống thật do lỗi cấu hình môi trường từ bên thứ ba. Hơn 141.000 lượt chạy đã được rà soát và thắt chặt quy trình kiểm soát.</div>
+      <div class="r-act">→ NÊN LÀM: Luôn cô lập môi trường thực thi (docker/sandbox) khi cho phép Agent tự chạy các câu lệnh CLI hoặc script mạng.</div>
+      <div class="r-meta">Nguồn: Anthropic Security Report · 30/07/2026</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">OpenAI</span>
+        <span class="pill ok">Nên thử</span>
+        <div class="t">GPT-5.6 Series giảm giá mạnh & Lịch ngừng hỗ trợ model o3/GPT-5.4</div>
+      </div>
+      <div class="r-sum">OpenAI giảm 20% giá API GPT-5.6 Terra và 80% giá GPT-5.6 Luna. Đang thông báo ngừng hỗ trợ model o3 từ 26/08/2026 và GPT-5.4/mini trên Codex từ 31/08/2026. ChatGPT Desktop bổ sung xem diff multi-repo.</div>
+      <div class="r-act">→ NÊN LÀM: Rà soát lại hệ thống API đang gọi model o3 hoặc GPT-5.4 để chuyển sang dòng GPT-5.6 trước thời điểm sunset cuối tháng 8.</div>
+      <div class="r-meta">Nguồn: OpenAI Changelog · 01/08/2026</div>
+    </div>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">Google</span>
+        <span class="pill now">Nên dùng ngay</span>
+        <div class="t">Gemini 3.6 Flash & Gemini 3.5 Flash-Lite ra mắt</div>
+      </div>
+      <div class="r-sum">Gemini 3.6 Flash tiết kiệm 17% token với khả năng lập kế hoạch Agent mạnh mẽ. Gemini 3.5 Flash-Lite đạt tốc độ siêu nhanh 350 token/giây, tối ưu chi phí cho các luồng xử lý tự động hoá lặp đi lặp lại.</div>
+      <div class="r-act">→ NÊN DÙNG NGAY: Thay thế các model cũ bằng Gemini 3.5 Flash-Lite cho công việc crawl tin tức, parse HTML và bóc tách dữ liệu hàng loạt.</div>
+      <div class="r-meta">Nguồn: Google AI Blog · 21/07 - 30/07/2026</div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">2</div><h2>Repo GitHub hot trong tuần</h2></div>
+    <p class="sec-sub">Công cụ mã nguồn mở thực dụng cho Automation & Trading.</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">GitHub</span>
+        <span class="pill ok">Nên thử</span>
+        <div class="t"><a href="https://github.com/ed-is-ai/Agents.stocks" target="_blank">ed-is-ai/Agents.stocks</a> — Pipeline Multi-Agent lọc cổ phiếu CANSLIM</div>
+      </div>
+      <div class="r-sum">Hệ thống Multi-Agent kết hợp bóc tách báo cáo tài chính SEC EDGAR, chạy bộ lọc tiêu chí CANSLIM và phân tích chu kỳ Stage Analysis của Stan Weinstein để đưa ra danh sách theo dõi chất lượng.</div>
+      <div class="r-act">→ NÊN THỬ: Tham khảo kiến trúc phân vai agent (Extractor → Screener → Analyst) để ứng dụng vào bộ lọc chứng khoán Việt Nam.</div>
+      <div class="r-meta">Nguồn: GitHub Trending · Trading Automation</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">GitHub</span>
+        <span class="pill ok">Nên thử</span>
+        <div class="t"><a href="https://github.com/YoungCan-Wang/WyckoffTradingAgent" target="_blank">YoungCan-Wang/WyckoffTradingAgent</a> — Nhận diện Pha Wyckoff & VSA</div>
+      </div>
+      <div class="r-sum">Công cụ sử dụng LLM nhận diện các pha Tích lũy/Phân phối Wyckoff dựa trên khối lượng và biến động giá, giúp giảm thiểu tín hiệu giả từ các chỉ báo kỹ thuật truyền thống khi có rũ bỏ (liquidity sweep).</div>
+      <div class="r-act">→ NÊN THỬ: Áp dụng logic kiểm chứng biến động volume để nâng cấp script lọc tín hiệu Spring/LPS.</div>
+      <div class="r-meta">Nguồn: GitHub Trending · Market Structure</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">GitHub</span>
+        <span class="pill no">Tuỳ nhu cầu</span>
+        <div class="t"><a href="https://github.com/HKUDS/AI-Trader" target="_blank">HKUDS/AI-Trader</a> — Benchmark Autonomous Trading Agent với Hard-Stop Protection</div>
+      </div>
+      <div class="r-sum">Khung thử nghiệm đánh giá khả năng tự giao dịch của AI Agent với cơ chế cài đặt cắt lỗ cứng (hard-stop) bằng code không cho phép AI tự động ghi đè rủi ro.</div>
+      <div class="r-act">→ BỎ QUA NẾU CHƯA CẦN: Chỉ nên dùng làm tham khảo mô hình quản trị rủi ro bằng code thay vì cho phép bot đặt lệnh thật.</div>
+      <div class="r-meta">Nguồn: GitHub Research · Quantitative Trading</div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">3</div><h2>Mạng xã hội & Video đáng chú ý</h2></div>
+    <p class="sec-sub">Chắt lọc giải pháp thực chiến từ cộng đồng AI & Developer.</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">YouTube / X</span>
+        <span class="pill now">Nên xem ngay</span>
+        <div class="t">Kết hợp n8n Workflow với Claude MCP Server để Tự động hóa công việc</div>
+      </div>
+      <div class="r-sum">Giải pháp kết nối trực tiếp công cụ n8n với các MCP Server của Claude để tự động quét tin tức, tạo báo cáo và gửi thông báo qua LINE/Telegram mà không cần viết code server backend phức tạp.</div>
+      <div class="r-act">→ NÊN XEM NGAY: Áp dụng mô hình n8n + MCP vào các quy trình báo cáo nội bộ hằng ngày để tiết kiệm thời gian vận hành.</div>
+      <div class="r-meta">Nguồn: AI Automation Tutorials · 2026</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">Reddit</span>
+        <span class="pill ok">Nên đọc</span>
+        <div class="t">So sánh Gemini 3.5 Flash-Lite & Llama 3.3 70B cho tác vụ bóc tách dữ liệu</div>
+      </div>
+      <div class="r-sum">Cộng đồng r/LocalLLaMA đánh giá Gemini 3.5 Flash-Lite có tốc độ phản hồi cực nhanh (350 token/s) với chi phí thấp hơn đáng kể so với việc tự host các model open-source 70B cho tác vụ bóc tách HTML/JSON.</div>
+      <div class="r-act">→ NÊN THỬ: Ưu tiên dùng Gemini Flash-Lite API cho các công việc xử lý văn bản quy mô lớn thay vì đầu tư tài nguyên GPU.</div>
+      <div class="r-meta">Nguồn: Reddit r/LocalLLaMA · 2026</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">Diễn đàn Dev</span>
+        <span class="pill ok">Nên biết</span>
+        <div class="t">Mô hình Quản lý Kế hoạch & Tiến độ qua File System (Manus Style)</div>
+      </div>
+      <div class="r-sum">Kỹ thuật duy trì bộ nhớ dài hạn cho AI Agent bằng cách sử dụng bộ file `task_plan.md`, `findings.md`, `progress.md` ghi trực tiếp lên đĩa thay vì nhồi nhét toàn bộ ngữ cảnh vào memory chat.</div>
+      <div class="r-act">→ NÊN LÀM: Áp dụng chuẩn file-based planning cho mọi quy trình AI Agent nhiều bước để tránh tràn token context.</div>
+      <div class="r-meta">Nguồn: Agentic Architecture Discussion · 2026</div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">4</div><h2>Chứng khoán & Trading (Wyckoff / VSA / CANSLIM)</h2></div>
+    <p class="sec-sub">Góc nhìn phân tích kỹ thuật & quản trị rủi ro.</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">Wyckoff / VSA</span>
+        <span class="pill ok">Quan trọng</span>
+        <div class="t">Nhận diện đợt rũ bỏ (Liquidity Sweep) trong Phase C trước khi vượt Creek</div>
+      </div>
+      <div class="r-sum">Trong phương pháp Wyckoff, các nhịp rũ bỏ Spring/UTAD thường đi kèm với hiện tượng quét thanh khoản. Việc quan sát VSA (khối lượng cạn kiệt - No Supply) tại điểm Test là điều kiện tiên quyết trước khi mở vị thế.</div>
+      <div class="r-act">→ QUY TẮC: Không mở vị thế khi thấy biên độ giá rộng kèm volume lớn ở nhịp rũ; chỉ giải ngân khi có nến No Supply dừng bán xác nhận.</div>
+      <div class="r-meta">Nguồn: Wyckoff Structural Analysis</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">CANSLIM</span>
+        <span class="pill ok">Kỷ luật</span>
+        <div class="t">Quy tắc quản trị vị thế Pyramiding & Cắt lỗ cứng 7-8%</div>
+      </div>
+      <div class="r-sum">Mô hình CANSLIM đòi hỏi kết hợp yếu tố tăng trưởng cơ bản (C - Current Earnings, N - New Products) với kỷ luật mua gia tăng vị thế khi cổ phiếu bứt phá nền giá chuẩn và dừng lỗ nghiêm ngặt.</div>
+      <div class="r-act">→ QUY TẮC: Luôn đặt stoploss cứng 7-8% ngay khi vào lệnh và chỉ gia tăng tỷ trọng khi vị thế ban đầu đã có lãi từ 2-3%.</div>
+      <div class="r-meta">Nguồn: CANSLIM Strategy Framework</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Bản tin AI hằng ngày được khởi tạo tự động lúc 08:00 AM · Xem bản tin trên GitHub Pages: <a href="https://sanglove9900.github.io/ban-tin-ai/ban-tin-ai-2026-08-03.html" target="_blank">https://sanglove9900.github.io/ban-tin-ai/ban-tin-ai-2026-08-03.html</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
