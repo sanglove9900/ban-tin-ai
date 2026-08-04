@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Đơn Dinh Dưỡng Sức Khỏe - 04/08/2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #14406E;
+            --primary-end: #1E86B4;
+            --accent: #3FD0E8;
+            --bg: #F4F7FA;
+            --surface: #FFFFFF;
+            --text: #16324F;
+            --muted: #607F9C;
+            --border: #E1E9F0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Lexend', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-end));
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            box-shadow: 0 4px 20px rgba(20, 64, 110, 0.15);
+        }
+        .header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        .summary-bar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 16px;
+        }
+        .summary-item { text-align: center; }
+        .summary-item span { display: block; font-size: 11px; opacity: 0.8; }
+        .summary-item strong { font-size: 16px; color: var(--accent); }
+        
+        .container { max-width: 800px; margin: 20px auto; padding: 0 16px; }
+        .meal-section { margin-bottom: 30px; }
+        .section-title {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 14px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .dishes-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 600px) {
+            .dishes-grid { grid-template-columns: 1fr 1fr; }
+        }
+        .dish-card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 16px;
+            border: 1fr solid var(--border);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+        .dish-header { display: flex; gap: 12px; margin-bottom: 12px; }
+        .dish-img { width: 90px; height: 90px; border-radius: 12px; object-fit: cover; }
+        .dish-img-placeholder {
+            width: 90px; height: 90px; border-radius: 12px;
+            background: #E3F6FB; display: flex; align-items: center;
+            justify-content: center; font-size: 36px;
+        }
+        .dish-info { flex: 1; }
+        .dish-badge {
+            display: inline-block; font-size: 10px; background: #E3F6FB;
+            color: #0B7285; font-weight: 600; padding: 2px 8px; border-radius: 6px;
+        }
+        .dish-name { font-size: 15px; font-weight: 700; color: var(--primary); margin: 4px 0; }
+        .dish-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 6px; }
+        .tag { font-size: 10px; background: #F0F4F8; color: var(--muted); padding: 2px 6px; border-radius: 4px; }
+        .dish-meta { font-size: 11px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+        
+        .dish-body { font-size: 12px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+        .dish-desc { color: #4A5568; }
+        .dish-nut-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            background: #F8FAFC; padding: 8px; border-radius: 8px; text-align: center;
+        }
+        .nut-item span { display: block; font-size: 9px; color: var(--muted); }
+        .nut-item strong { font-size: 12px; color: var(--primary); }
+        
+        .dish-ingredients { background: #FFF9F2; padding: 8px; border-radius: 8px; color: #795548; font-size: 11px; }
+        .dish-note { background: #FFF7E8; padding: 8px; border-radius: 8px; color: #8A6420; font-size: 11px; }
+        .dish-medical { background: #EBF8FF; padding: 8px; border-radius: 8px; color: #2B6CB0; font-size: 11px; }
+        
+        .drink-card, .fruit-card {
+            background: var(--surface); border-radius: 16px; padding: 16px;
+            display: flex; gap: 16px; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .drink-img, .fruit-img { width: 80px; height: 80px; border-radius: 12px; object-fit: cover; }
+        .drink-details h3, .fruit-details h3 { font-size: 15px; color: var(--primary); margin-bottom: 4px; }
+        .drink-details p, .fruit-details p { font-size: 12px; color: var(--muted); }
+        .cost-tag { color: #00796B; font-weight: 600; margin-top: 4px; }
+
+        .tip-box {
+            background: #E9F7FA; border-left: 4px solid var(--accent);
+            padding: 14px; border-radius: 8px; margin-top: 20px; font-size: 13px; color: #0D5C6B;
+        }
+        .footer { text-align: center; margin-top: 40px; font-size: 12px; color: var(--muted); }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🐾 GẤU NHẮC BA MẸ ĂN CƠM</h1>
+        <p>Thực đơn Dinh dưỡng Sức khỏe · Thứ Ba, 04/08/2026</p>
+        <div class="summary-bar">
+            <div class="summary-item"><span>Tổng calo cả ngày</span><strong>~420 kcal</strong></div>
+            <div class="summary-item"><span>Tổng chất đạm</span><strong>~16g</strong></div>
+            <div class="summary-item"><span>Tiền chợ/người</span><strong>~20,000đ</strong></div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <section class="meal-section">
+            <h2 class="section-title">🌅 BỮA SÁNG (06:30)</h2>
+            <div class="dishes-grid">
+            <div class="dish-card">
+                <div class="dish-header">
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=800" alt="Bún Gạo Lứt Xào Rau Củ & Đậu Hũ" class="dish-img">
+                    <div class="dish-info">
+                        <div class="dish-badge">Lựa chọn 1</div>
+                        <h3 class="dish-name">Bún Gạo Lứt Xào Rau Củ & Đậu Hũ</h3>
+                        <div class="dish-tags"><span class="tag">Thơm ngon</span><span class="tag">Nhiều rau</span></div>
+                        <div class="dish-meta">
+                            <span>⏱️ 20 phút</span>
+                            <span>🍽️ 1 tô (80g bún khô + 100g đậu hũ)</span>
+                            <span>🔥 420 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-body">
+                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Bún lứt dai dai nhiều chất xơ, đậu hũ áp chảo thơm, rau củ giòn ngọt.</p>
+                    <div class="dish-nut-grid">
+                        <div class="nut-item"><span>Tinh bột</span><strong>62g</strong></div>
+                        <div class="nut-item"><span>Đạm</span><strong>16g</strong></div>
+                        <div class="nut-item"><span>Chất xơ</span><strong>7g</strong></div>
+                        <div class="nut-item"><span>Giá ước tính</span><strong>20,000đ</strong></div>
+                    </div>
+                    <div class="dish-ingredients">
+                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Bún gạo lứt, Đậu hũ trắng, Cải ngọt, Cà rốt, Nấm rơm
+                    </div>
+                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Mua bún Mẹ nhớ lật xem thành phần — nhiều loại ghi gạo lứt mà thật ra toàn bột gạo trắng.</div>
+                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Bún 'gạo lứt' thương mại thường chỉ pha 10-20% gạo lứt, phần còn lại là bột gạo trắng GI cao.</div>
+                </div>
+            </div>
+            
+            <div class="dish-card">
+                <div class="dish-header">
+                    <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=800" alt="Cháo Yến Mạch Đậu Đỏ & Hạt Sen" class="dish-img">
+                    <div class="dish-info">
+                        <div class="dish-badge">Lựa chọn 2</div>
+                        <h3 class="dish-name">Cháo Yến Mạch Đậu Đỏ & Hạt Sen</h3>
+                        <div class="dish-tags"><span class="tag">Ấm bụng</span><span class="tag">Dễ nấu</span><span class="tag">Ngủ ngon</span></div>
+                        <div class="dish-meta">
+                            <span>⏱️ 20 phút</span>
+                            <span>🍽️ 1 tô ~350ml (40g yến mạch khô + 20g đậu đỏ)</span>
+                            <span>🔥 320 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-body">
+                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Yến mạch tiêu hóa chậm, đậu đỏ và hạt sen thanh mát, ăn sáng nhẹ bụng cả buổi.</p>
+                    <div class="dish-nut-grid">
+                        <div class="nut-item"><span>Tinh bột</span><strong>52g</strong></div>
+                        <div class="nut-item"><span>Đạm</span><strong>12g</strong></div>
+                        <div class="nut-item"><span>Chất xơ</span><strong>9g</strong></div>
+                        <div class="nut-item"><span>Giá ước tính</span><strong>15,000đ</strong></div>
+                    </div>
+                    <div class="dish-ingredients">
+                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Yến mạch, Đậu đỏ, Hạt sen, Kỷ tử
+                    </div>
+                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Kỷ tử rắc nhẹ tay thôi, chừng 8-10 hạt là vừa ngọt.</div>
+                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Kỷ tử tương tác với warfarin (thuốc chống đông) — nếu đang dùng thuốc này thì bỏ hẳn kỷ tử.</div>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        
+        <section class="meal-section">
+            <h2 class="section-title">🥤 THỨC UỐNG MÙA VỤ BỔ DƯỠNG</h2>
+            <div class="drink-card">
+                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=800" alt="Nước Đỗ Đen Xanh Lòng Rang" class="drink-img">
+                <div class="drink-details">
+                    <h3>Nước Đỗ Đen Xanh Lòng Rang</h3>
+                    <p><strong>✨ Công dụng:</strong> Thơm mùi đỗ rang, uống thay nước lọc cả ngày rất dễ chịu.</p>
+                    <p><strong>🍵 Hướng dẫn pha chế:</strong> Rang đỗ đen xanh lòng chín thơm, đun sôi 10 phút. Không cho đường.</p>
+                    <p class="cost-tag">💰 Chi phí: Rất rẻ (~3.000đ/lít)</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="meal-section">
+            <h2 class="section-title">🍉 TRÁNG MIỆNG GI THẤP</h2>
+            <div class="fruit-card">
+                <img src="https://images.unsplash.com/photo-1536511135884-22b64d42b936?q=80&w=800" alt="Ổi" class="fruit-img">
+                <div class="fruit-details">
+                    <h3>Ổi (1/2 quả vừa (~100g))</h3>
+                    <p>Giòn, ít ngọt, rẻ nhất chợ.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <div class="tip-box"><strong>🐾 Gấu mách nhỏ Ba Mẹ:</strong> Mấy loại thuốc nam mát gan bán ngoài chợ đừng tự uống dài ngày, phải hỏi bác sĩ trước đã.</div>
+
+        <div class="footer">
+            <p>Chúc Ba Mẹ luôn ngon miệng & tràn đầy sức khỏe! ❤️</p>
+            <p style="font-size: 10px; margin-top: 4px;">*Thông tin dinh dưỡng mang tính chất tham khảo cho gia đình.</p>
+        </div>
+    </div>
+
+</body>
+</html>
