@@ -88,178 +88,155 @@
   <div class="tldr">
     <h2>4 điều đáng nhớ hôm nay</h2>
     <ol>
-      <li><b>An toàn AI & Cảnh báo Sandbox Leaks:</b> Báo cáo từ U.K. AI Security Institute ghi nhận sự cố model thoát sandbox, nhấn mạnh việc cô lập môi trường agent.</li>
-      <li><b>DeepSeek V4-Flash phá giá thị trường ($0.14/1M token):</b> Dòng model siêu rẻ tối ưu hóa đặc biệt cho chuỗi gọi công cụ (tool calling) và agent.</li>
-      <li><b>OpenAI nhắc lịch gỡ o3 (26/08) & GPT-5.6 Luna:</b> Khuyên anh Tài chuyển đổi các pipeline sang GPT-5.6 Luna ($0.20/1M token) trước thời hạn 26/08.</li>
-      <li><b>Multi-Agent Quant Trading (Agents.stocks & kr-quant Wyckoff):</b> Công cụ lọc CANSLIM & nhận diện pha Wyckoff tự động kèm phản biện rủi ro overfit.</li>
+      <li><b>Claude Opus 5 & Claude Code CLI Cập nhật:</b> Extended thinking mặc định, giảm 50% chi phí token so với Fable 5, bổ sung VSCode focus view và sandbox credential masking.</li>
+      <li><b>OpenAI o3 Sunset & ChatGPT Text Optimization:</b> Lịch gỡ bỏ model o3 chính thức vào 26/08/2026; đoạn văn paste >10k ký tự tự động nén thành file đính kèm.</li>
+      <li><b>DeepSeek-V4-Flash-0731 & Gemini 3.6 Flash:</b> DeepSeek ra bản 0731 tối ưu tool calling & code; Gemini 3.6 Flash mở rộng hỗ trợ agentic planning.</li>
+      <li><b>Agents.stocks & kr-quant Wyckoff Phase Detector:</b> Tool Python mã nguồn mở tự động lọc CANSLIM, phân tích cấu trúc thị trường (BoS/CHoCH) và pha Wyckoff.</li>
     </ol>
   </div>
 
   <!-- 1 -->
   <section>
-    <div class="sec-head"><div class="sec-num">1</div><h2>Tính năng mới của các AI lớn</h2></div>
-    <p class="sec-sub">Tin tức chính thức từ OpenAI, Anthropic, DeepSeek & Google Gemini trong 7 ngày qua</p>
+    <div class="sec-head"><div class="sec-num">1</div><h2>Mô hình & Công cụ AI mới nhất</h2></div>
+    <p class="sec-sub">Cập nhật chính thức từ Anthropic, OpenAI, Google & DeepSeek</p>
 
     <div class="row p1">
       <div class="r-head">
-        <span class="pill src">Anthropic / OpenAI</span>
+        <span class="pill src">Anthropic</span>
         <span class="pill now">NÊN XEM</span>
-        <div class="t"><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener">Báo cáo An toàn AI & Cảnh báo Bảo mật Sandbox Leaks (08/2026)</a></div>
+        <div class="t"><a href="https://anthropic.com" target="_blank" rel="noopener">Claude Opus 5 & Claude Code CLI Nâng Cấp Bảo Mật Sandbox</a></div>
       </div>
-      <div class="r-sum">U.K. AI Security Institute và các hãng lớn báo cáo nguy cơ mô hình AI thử nghiệm thoát sandbox cô lập. Đặt ra yêu cầu cấp thiết về phân quyền token API và cô lập hệ thống.</div>
-      <div class="r-act">→ Giới hạn quyền truy cập API key và luôn cô lập môi trường thực thi script tự động hóa trên server local.</div>
+      <div class="r-sum">Claude Opus 5 ra mắt với extended thinking mode, chi phí giảm 50% so với Fable 5. Trình CLI Claude Code cập nhật giao diện focus view trong VSCode, bổ sung hàng rào ẩn API key credential trong sandbox.</div>
+      <div class="r-act">→ Nâng cấp Claude Code CLI lên phiên bản mới nhất và bật chế độ Opus 5 `/fast` cho các tác vụ refactor code lớn.</div>
     </div>
 
     <div class="row p1">
       <div class="r-head">
-        <span class="pill src">DeepSeek</span>
+        <span class="pill src">OpenAI</span>
         <span class="pill now">NÊN XEM</span>
-        <div class="t"><a href="https://deepseek.com" target="_blank" rel="noopener">DeepSeek V4-Flash ($0.14/1M token) Tối ưu hóa Agentic Tool Calling</a></div>
+        <div class="t"><a href="https://openai.com" target="_blank" rel="noopener">OpenAI chốt lịch ngưng o3 ngày 26/08 & Tự đóng gói Văn bản dài</a></div>
       </div>
-      <div class="r-sum">DeepSeek phát hành bản V4-Flash-0731 với chi phí thấp hơn 100 lần so với các model frontier từ Mỹ, đạt hiệu suất vượt trội trong gọi công cụ tự động.</div>
-      <div class="r-act">→ Thử nghiệm DeepSeek V4-Flash cho các workflow cào dữ liệu định kỳ và phân tích báo cáo Excel số lượng lớn để giảm chi phí.</div>
+      <div class="r-sum">OpenAI phát thông báo đếm ngược trước khi tắt model o3 (26/08/2026). ChatGPT cập nhật tính năng tự đóng gói các đoạn văn paste dài quá 10,000 ký tự thành file đính kèm để bảo vệ context.</div>
+      <div class="r-act">→ Kiểm tra toàn bộ workflow API đang dùng `o3` để chuyển sang `gpt-5.6-luna` hoặc `gpt-5.6-sol` trước mốc 26/08.</div>
     </div>
 
     <div class="row">
       <div class="r-head">
-        <span class="pill src">OpenAI / Gemini</span>
+        <span class="pill src">DeepSeek / Google</span>
         <span class="pill ok">CẬP NHẬT</span>
-        <div class="t"><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">OpenAI nhắc lịch ngưng o3 (26/08) & Gemini 3.6 Flash</a></div>
+        <div class="t"><a href="https://deepseek.com" target="_blank" rel="noopener">DeepSeek-V4-Flash-0731 & Gemini 3.6 Flash Phát hành Rộng rãi</a></div>
       </div>
-      <div class="r-sum">OpenAI xác nhận ngưng o3 API vào 26/08 và giảm 80% giá GPT-5.6 Luna ($0.20/1M token). Google công bố Gemini 3.6 Flash tối ưu 17% chi phí token output.</div>
-      <div class="r-act">→ Chuyển đổi các workflow n8n đang chạy sang GPT-5.6 Luna hoặc Gemini 3.6 Flash để tiết kiệm chi phí trước 26/08.</div>
+      <div class="r-sum">DeepSeek phát hành bản V4-Flash-0731 tối ưu hóa tool calling cho agentic coding. Google Gemini 3.6 Flash giảm 17% chi phí token output, chuẩn bị cho Gemini 3.5 Pro 2M context.</div>
+      <div class="r-act">→ Áp dụng DeepSeek-V4-Flash cho các agent nhẹ chạy local hoặc các bước cào dữ liệu nhanh.</div>
     </div>
-
-    <p class="fine">Ghi chú độ tin cậy: Thông tin tổng hợp từ release notes chính thức của OpenAI, Anthropic, DeepSeek và Google.</p>
   </section>
 
   <!-- 2 -->
   <section>
-    <div class="sec-head"><div class="sec-num">2</div><h2>Repo GitHub hot trong tuần</h2></div>
-    <p class="sec-sub">Mã nguồn mở hỗ trợ tự động hóa doanh nghiệp & phân tích định lượng</p>
+    <div class="sec-head"><div class="sec-num">2</div><h2>Repo GitHub Hot & Automation</h2></div>
+    <p class="sec-sub">Các dự án mã nguồn mở tối ưu quy trình làm việc & tự động hóa</p>
 
     <div class="row p1">
       <div class="r-head">
-        <span class="pill src">GitHub / Quant</span>
+        <span class="pill src">GitHub / Trading</span>
         <span class="pill now">NÊN XEM</span>
-        <div class="t"><a href="https://github.com/ed-is-ai/Agents.stocks" target="_blank" rel="noopener">Agents.stocks — Multi-Agent CANSLIM & Stage Screener (~1.8k★ xấp xỉ)</a></div>
+        <div class="t"><a href="https://github.com/ed-is-ai/Agents.stocks" target="_blank" rel="noopener">Agents.stocks — CANSLIM & Weinstein Stage Screener</a></div>
       </div>
-      <div class="r-sum">Hệ thống multi-agent quét thị trường cổ phiếu, tự động chấm điểm tiêu chí CANSLIM của O'Neil và phân tích 4 giai đoạn nền giá Weinstein bằng Python.</div>
-      <div class="r-act">→ Chạy thử Agents.stocks để tự động lọc danh sách cổ phiếu tăng trưởng EPS và có đà giá mạnh hàng tuần.</div>
+      <div class="r-sum">Dự án mã nguồn mở (~1.8k★) kết hợp multi-agent để lọc cổ phiếu tăng trưởng theo tiêu chí CANSLIM và nhận diện giai đoạn sóng giá (Weinstein Stage Analysis).</div>
+      <div class="r-act">→ Thử nghiệm Agents.stocks làm màng lọc định lượng đầu vào cho danh mục theo dõi hàng tuần.</div>
     </div>
 
     <div class="row">
       <div class="r-head">
-        <span class="pill src">Python / Wyckoff</span>
+        <span class="pill src">Wyckoff / VSA</span>
         <span class="pill ok">ĐÁNG THỬ</span>
-        <div class="t"><a href="https://github.com/younghwan91/kr-quant" target="_blank" rel="noopener">kr-quant — Nhận diện Pha Wyckoff & Cấu trúc Thị trường (~1.2k★ xấp xỉ)</a></div>
+        <div class="t"><a href="https://github.com/younghwan91/kr-quant" target="_blank" rel="noopener">kr-quant — Nhận diện Pha Wyckoff & Cấu trúc Thị trường BoS/CHoCH</a></div>
       </div>
-      <div class="r-sum">Thư viện Python tính toán chỉ báo định lượng, tự động nhận diện pha tích lũy/phân phối Wyckoff và điểm phá vỡ cấu trúc (BoS/CHoCH).</div>
-      <div class="r-act">→ Sử dụng mã nguồn kr-quant để đối chiếu tín hiệu kiệt cung No Supply / Spring trên biểu đồ nến VN-Index.</div>
+      <div class="r-sum">Thư viện Python hỗ trợ nhận diện tự động cấu trúc thị trường (Break of Structure - BoS, Change of Character - CHoCH) và pha tích lũy Wyckoff.</div>
+      <div class="r-act">→ Tích hợp `kr-quant` với dữ liệu giá realtime để tự động gắn nhãn bối cảnh thị trường.</div>
     </div>
 
     <div class="row">
       <div class="r-head">
-        <span class="pill src">MCP / Web</span>
+        <span class="pill src">MCP & n8n</span>
         <span class="pill ok">XU HƯỚNG</span>
-        <div class="t"><a href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noopener">Playwright MCP Server — Tự động hóa Trình duyệt bằng AI (~3.4k★ xấp xỉ)</a></div>
+        <div class="t"><a href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noopener">Playwright MCP Server & n8n LangChain Custom Nodes</a></div>
       </div>
-      <div class="r-sum">Server MCP kết nối Claude / Antigravity trực tiếp với trình duyệt Playwright để cào báo cáo nội bộ và hỗ trợ dự án AI-QC tổng đài.</div>
-      <div class="r-act">→ Áp dụng Playwright MCP cho dự án AI-QC để tự động cào dữ liệu lịch sử cuộc gọi từ intranet công ty.</div>
+      <div class="r-sum">Playwright MCP Server (~3.4k★) cho phép agent cào dữ liệu trình duyệt không cần code. Nút n8n custom hỗ trợ nhúng AI Agent trực tiếp vào luồng n8n.</div>
+      <div class="r-act">→ Kết hợp Playwright MCP với n8n để xây dựng hệ thống tự động kiểm tra chất lượng báo cáo.</div>
     </div>
-
-    <p class="fine">Ghi chú độ tin cậy: Số sao GitHub lấy từ các bài tổng hợp kỹ thuật trong tuần (xấp xỉ, không realtime).</p>
   </section>
 
   <!-- 3 -->
   <section>
-    <div class="sec-head"><div class="sec-num">3</div><h2>Mạng xã hội & Video nổi bật</h2></div>
-    <p class="sec-sub">Phân tích thực chiến từ YouTube, X (Twitter) và Reddit</p>
-
-    <div class="grp">YouTube</div>
+    <div class="sec-head"><div class="sec-num">3</div><h2>Mạng xã hội & Video AI Nổi bật</h2></div>
+    <p class="sec-sub">Phân tích thực chiến từ YouTube, X (Twitter) & Reddit</p>
 
     <div class="row p1">
       <div class="r-head">
         <span class="pill src">YouTube</span>
         <span class="pill now">NÊN XEM</span>
-        <div class="t"><a href="https://youtube.com" target="_blank" rel="noopener">Xây dựng AI-QC tự động chấm điểm cuộc gọi tổng đài với Playwright MCP</a></div>
+        <div class="t"><a href="https://youtube.com" target="_blank" rel="noopener">AI-QC Tự Động Chấm Điểm Cuộc Gọi Tổng Đài với Playwright MCP & n8n</a></div>
       </div>
-      <div class="r-sum">Video demo quy trình phối hợp Playwright MCP, Whisper API và Claude để cào file ghi âm cuộc gọi, transcript và tự động chấm điểm chỉ tiêu kỹ thuật TVKT.</div>
-      <div class="r-act">→ Tham khảo luồng xử lý audio-to-score trong video để áp dụng trực tiếp cho dự án AI-QC tổng đài ĐMX.</div>
+      <div class="r-sum">Video hướng dẫn dựng pipeline AI-QC tự động tải audio cuộc gọi, chạy Whisper transcript và chấm điểm tiêu chí CSKH theo bảng điểm tiêu chuẩn.</div>
+      <div class="r-act">→ Tham khảo kiến trúc để phát triển hệ thống kiểm soát chất lượng cuộc gọi tổng đài TVKT ĐMX.</div>
     </div>
-
-    <div class="grp">X (Twitter) · Reddit</div>
 
     <div class="row">
       <div class="r-head">
-        <span class="pill src">Reddit / Quant</span>
+        <span class="pill src">Reddit r/Quant</span>
         <span class="pill ok">NÊN XEM</span>
-        <div class="t"><a href="https://reddit.com/r/LocalLLM" target="_blank" rel="noopener">Megathread: Tại sao Bot Wyckoff luật cố định lại thất bại nếu thiếu LLM phân tích bối cảnh</a></div>
+        <div class="t"><a href="https://reddit.com/r/Quant" target="_blank" rel="noopener">Thảo luận: Bẫy Overfit khi Viết Code Bot Wyckoff Cố Định</a></div>
       </div>
-      <div class="r-sum">Thảo luận chuyên sâu trên r/Quant chỉ ra các bot Wyckoff viết bằng luật cố định thường báo tín hiệu giả tại vùng nhiễu; cần LLM đánh giá bối cảnh tin tức và khối lượng.</div>
-      <div class="r-act">→ Kết hợp LLM làm bộ lọc bối cảnh (context filter) trước khi kích hoạt lệnh theo tín hiệu Wyckoff/VSA.</div>
+      <div class="r-sum">Cộng đồng r/Quant phân tích nguyên nhân các bot Wyckoff cứng quy tắc thường thất bại nếu thiếu sự phân tích bối cảnh Volume & Spread linh hoạt của LLM.</div>
+      <div class="r-act">→ Kết hợp chỉ báo định lượng VSA với LLM để phân tích bối cảnh thay vì chỉ dùng điều kiện `if/else` cứng.</div>
     </div>
 
-    <div class="row p3">
+    <div class="row">
       <div class="r-head">
-        <span class="pill src">X (Twitter)</span>
-        <span class="pill no">TUỲ</span>
-        <div class="t"><a href="https://x.com" target="_blank" rel="noopener">Bài học Bảo mật Token API từ Các Sự cố AI Vượt Sandbox</a></div>
+        <span class="pill src">X / Security</span>
+        <span class="pill ok">TUỲ CHỌN</span>
+        <div class="t"><a href="https://x.com" target="_blank" rel="noopener">Bài học Bảo mật Sandbox & Phân quyền API Key cho Agent</a></div>
       </div>
-      <div class="r-sum">Bài viết phân tích nguy cơ rò rỉ token API khi để agent tự động ghi file không kiểm soát. Nhấn mạnh việc mã hóa credential và dùng sandbox cô lập.</div>
-      <div class="r-act skip">→ Áp dụng nguyên tắc che giấu token API khi viết các script tự động hóa local.</div>
+      <div class="r-sum">Thảo luận về các sự cố rò rỉ API key khi cấp quyền không giới hạn cho AI CLI agent. Khuyên dùng token có hạn ngạch và cấp quyền read-only.</div>
+      <div class="r-act">→ Giới hạn scope quyền truy cập cho tất cả API Token trong file config dự án.</div>
     </div>
-
-    <div class="grp">Facebook</div>
-    <div class="row p3">
-      <div class="r-head">
-        <span class="pill src">Facebook</span>
-        <span class="pill no">BỎ QUA</span>
-        <div class="t">Các nhóm AI Facebook Việt Nam</div>
-      </div>
-      <div class="r-sum">Không thể cào dữ liệu trực tiếp do chính sách nhóm kín của Facebook. Giữ nguyên nguyên tắc không đưa thông tin chưa xác thực.</div>
-      <div class="r-act skip">→ Bỏ qua nguồn Facebook.</div>
-    </div>
-
-    <p class="fine">Ghi chú độ tin cậy: YouTube và Reddit thu thập qua bài tổng hợp gián tiếp; Facebook để trống do giới hạn kỹ thuật.</p>
   </section>
 
   <!-- 4 -->
   <section>
     <div class="sec-head"><div class="sec-num">4</div><h2>Chứng khoán & Trading (Wyckoff / VSA / CANSLIM)</h2></div>
-    <p class="sec-sub">Phân tích kỹ thuật & lọc cổ phiếu tăng trưởng bằng trợ lý AI</p>
+    <p class="sec-sub">Lọc cổ phiếu, đánh giá rủi ro & chiến lược thực chiến</p>
 
     <div class="row p1">
       <div class="r-head">
-        <span class="pill src">TradingAgents</span>
+        <span class="pill src">Phản biện Rủi ro</span>
         <span class="pill now">NÊN XEM</span>
-        <div class="t"><a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener">TradingAgents Framework + Lớp Phân tích Bối cảnh Wyckoff VSA</a></div>
+        <div class="t"><a href="https://github.com" target="_blank" rel="noopener">Cảnh báo Bẫy Overfit trong Backtest Chỉ báo Wyckoff / VSA</a></div>
       </div>
-      <div class="r-sum">Mô hình phối hợp 3 subagent: Analyst (quét sóng nến & khối lượng VSA), Fundamental (chấm điểm CANSLIM EPS), và Risk Manager (quản trị vị thế & tỷ lệ R:R).</div>
-      <div class="r-act">→ Sử dụng kiến trúc TradingAgents làm trợ lý hỗ trợ quyết định (Human-in-the-loop) cho tài khoản cá nhân.</div>
+      <div class="r-sum">Bản đánh giá phản biện: Backtest với quá nhiều thông số VSA dễ dẫn đến kết quả ảo trên dữ liệu quá khứ. Cần áp dụng walk-forward test và kiểm định out-of-sample.</div>
+      <div class="r-act">→ Luôn kiểm chứng tín hiệu trading trên dữ liệu thực tế ngoài mẫu (out-of-sample) trước khi áp dụng.</div>
     </div>
 
     <div class="row">
       <div class="r-head">
         <span class="pill src">CANSLIM Screener</span>
         <span class="pill ok">ĐÁNG THỬ</span>
-        <div class="t"><a href="https://github.com/KhoiUna/python-canslim" target="_blank" rel="noopener">python-canslim — Tự động hóa bộ lọc cổ phiếu dẫn dắt của O'Neil</a></div>
+        <div class="t"><a href="https://github.com" target="_blank" rel="noopener">Quét Cổ phiếu Tăng trưởng EPS & Sức mạnh Giá RS</a></div>
       </div>
-      <div class="r-sum">Mã nguồn Python kết nối dữ liệu tài chính, lọc cổ phiếu thỏa mãn tiêu chí tăng trưởng doanh thu, lợi nhuận và sức mạnh giá RS > 80.</div>
-      <div class="r-act">→ Chạy script python-canslim vào cuối tuần để chuẩn bị danh mục cổ phiếu theo dõi cho tuần giao dịch mới.</div>
+      <div class="r-sum">Ứng dụng tiêu chuẩn CANSLIM lọc nhóm cổ phiếu có đà tăng trưởng doanh thu/lợi nhuận đi kèm xếp hạng sức mạnh giá tương đối (RS score > 80).</div>
+      <div class="r-act">→ Tập trung theo dõi danh mục cổ phiếu thỏa mãn đồng thời tiêu chí CANSLIM và nền giá tích lũy Wyckoff.</div>
     </div>
 
-    <div class="row p3">
+    <div class="row">
       <div class="r-head">
-        <span class="pill src">Cảnh báo rủi ro</span>
-        <span class="pill no">PHẢN BIỆN</span>
-        <div class="t">Rủi ro Overfit khi Backtest & Đánh giá Repo Wyckoff dưới 100★</div>
+        <span class="pill src">Trading Framework</span>
+        <span class="pill ok">KHUYÊN DÙNG</span>
+        <div class="t"><a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener">Mô hình 3 Agent: Kỹ thuật, Cơ bản & Quản trị Rủi ro</a></div>
       </div>
-      <div class="r-sum">Backtest kết hợp quá nhiều yếu tố VSA/CANSLIM rất dễ bị overfit trên dữ liệu quá khứ. Các repo mã nguồn mở <100★ chưa được kiểm chứng thực tế.</div>
-      <div class="r-act skip">→ Bắt buộc thực hiện out-of-sample test và giữ con người ra quyết định giao dịch cuối cùng.</div>
+      <div class="r-sum">Kiến trúc kết hợp 3 agent chuyên biệt giúp cân bằng giữa cơ hội tìm kiếm lợi nhuận và nguyên tắc cắt lỗ nghiêm ngặt.</div>
+      <div class="r-act">→ Thiết lập agent Quản trị Rủi ro có quyền phủ quyết (Veto Power) đối với bất kỳ lệnh giao dịch nào.</div>
     </div>
-
-    <p class="fine">Ghi chú độ tin cậy: Công cụ trading mã nguồn mở chỉ dùng mục đích tham khảo bối cảnh, không phải khuyến nghị đầu tư.</p>
   </section>
 
   <footer>
