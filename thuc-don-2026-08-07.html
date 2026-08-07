@@ -101,6 +101,20 @@
         .dish-note { background: #FFF7E8; padding: 8px; border-radius: 8px; color: #8A6420; font-size: 11px; }
         .dish-medical { background: #EBF8FF; padding: 8px; border-radius: 8px; color: #2B6CB0; font-size: 11px; }
         
+        .dish-restaurant { background: #F0F9FF; border: 1px solid #BAE6FD; padding: 10px; border-radius: 10px; margin-top: 6px; }
+        .rest-header { display: flex; gap: 10px; align-items: center; }
+        .rest-img { width: 65px; height: 65px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+        .rest-info { flex: 1; font-size: 11px; color: #0369A1; }
+        .rest-title { font-size: 12px; margin-bottom: 2px; }
+        .rest-rating { color: #D97706; font-size: 10px; margin-left: 4px; }
+        .rest-addr { color: var(--muted); margin-bottom: 2px; font-size: 10.5px; }
+        .rest-price { color: #0F766E; margin-bottom: 4px; }
+        .rest-map-btn {
+            display: inline-block; background: #0284C7; color: white; padding: 3px 8px;
+            border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 10px; margin-top: 2px;
+        }
+        .rest-map-btn:hover { background: #0369A1; }
+        
         .drink-card, .fruit-card {
             background: var(--surface); border-radius: 16px; padding: 16px;
             display: flex; gap: 16px; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.03);
@@ -123,9 +137,9 @@
         <h1>🐾 GẤU NHẮC BA MẸ ĂN CƠM</h1>
         <p>Thực đơn Dinh dưỡng Sức khỏe · Thứ Sáu, 07/08/2026</p>
         <div class="summary-bar">
-            <div class="summary-item"><span>Tổng calo cả ngày</span><strong>~1110 kcal</strong></div>
-            <div class="summary-item"><span>Tổng chất đạm</span><strong>~42g</strong></div>
-            <div class="summary-item"><span>Tiền chợ/người</span><strong>~48,000đ</strong></div>
+            <div class="summary-item"><span>Tổng calo cả ngày</span><strong>~1180 kcal</strong></div>
+            <div class="summary-item"><span>Tổng chất đạm</span><strong>~44g</strong></div>
+            <div class="summary-item"><span>Tiền chợ/người</span><strong>~72,000đ</strong></div>
         </div>
     </div>
 
@@ -136,61 +150,87 @@
             <div class="dishes-grid">
             <div class="dish-card">
                 <div class="dish-header">
-                    <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=800" alt="Cháo Yến Mạch Đậu Đỏ & Hạt Sen" class="dish-img">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800" alt="Bánh Mì Nguyên Cám Kẹp Bơ & Nấm Sốt Cà" class="dish-img">
                     <div class="dish-info">
                         <div class="dish-badge">Lựa chọn 1</div>
-                        <h3 class="dish-name">Cháo Yến Mạch Đậu Đỏ & Hạt Sen</h3>
-                        <div class="dish-tags"><span class="tag">Ấm bụng</span><span class="tag">Dễ nấu</span><span class="tag">Ngủ ngon</span></div>
+                        <h3 class="dish-name">Bánh Mì Nguyên Cám Kẹp Bơ & Nấm Sốt Cà</h3>
+                        <div class="dish-tags"><span class="tag">Nhanh gọn</span><span class="tag">Béo bùi</span></div>
                         <div class="dish-meta">
-                            <span>⏱️ 20 phút</span>
-                            <span>🍽️ 1 tô ~350ml (40g yến mạch khô + 20g đậu đỏ)</span>
-                            <span>🔥 320 kcal</span>
+                            <span>⏱️ 15 phút</span>
+                            <span>🍽️ 2 lát (~70g) + 1/2 quả bơ</span>
+                            <span>🔥 400 kcal</span>
                         </div>
                     </div>
                 </div>
                 <div class="dish-body">
-                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Yến mạch tiêu hóa chậm, đậu đỏ và hạt sen thanh mát, ăn sáng nhẹ bụng cả buổi.</p>
+                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Bánh mì đen dai thơm, bơ quả béo mịn, nấm sốt cà chua đậm đà.</p>
                     <div class="dish-nut-grid">
-                        <div class="nut-item"><span>Tinh bột</span><strong>52g</strong></div>
+                        <div class="nut-item"><span>Tinh bột</span><strong>38g</strong></div>
                         <div class="nut-item"><span>Đạm</span><strong>12g</strong></div>
-                        <div class="nut-item"><span>Chất xơ</span><strong>9g</strong></div>
-                        <div class="nut-item"><span>Giá ước tính</span><strong>15,000đ</strong></div>
+                        <div class="nut-item"><span>Chất xơ</span><strong>10g</strong></div>
+                        <div class="nut-item"><span>Giá ước tính</span><strong>25,000đ</strong></div>
                     </div>
                     <div class="dish-ingredients">
-                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Yến mạch, Đậu đỏ, Hạt sen, Kỷ tử
+                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Bánh mì đen nguyên cám, Bơ quả, Nấm đùi gà, Cà chua
                     </div>
-                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Kỷ tử rắc nhẹ tay thôi, chừng 8-10 hạt là vừa ngọt.</div>
-                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Kỷ tử tương tác với warfarin (thuốc chống đông) — nếu đang dùng thuốc này thì bỏ hẳn kỷ tử.</div>
+                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Chọn ổ nào ghi 'nguyên cám 100%' ở dòng thành phần đầu tiên Mẹ nhé.</div>
+                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Nhiều loại bánh mì 'đen' chỉ là bột mì trắng nhuộm màu mạch nha, GI vẫn cao.</div>
+                    
+                    <div class="dish-restaurant">
+                        <div class="rest-header">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800" alt="Kashew Cheese Organic Bakery" class="rest-img">
+                            <div class="rest-info">
+                                <div class="rest-title">🏬 <strong>Kashew Cheese Organic Bakery</strong> <span class="rest-rating">4.8 ⭐ (620+ đánh giá)</span></div>
+                                <div class="rest-addr">📍 14 Trần Ngọc Diện, Thảo Điền, Q.2, TP.HCM</div>
+                                <div class="rest-price">💰 Giá tại quán: <strong>45.000đ - 85.000đ</strong></div>
+                                <a href="https://maps.google.com/?q=Kashew+Cheese+Thao+Dien+Quan+2" target="_blank" class="rest-map-btn">📍 Chỉ Đường Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="dish-card">
                 <div class="dish-header">
-                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=800" alt="Bún Gạo Lứt Xào Rau Củ & Đậu Hũ" class="dish-img">
+                    <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=800" alt="Miến Lứt Nấu Nấm Đông Cô & Mộc Nhĩ" class="dish-img">
                     <div class="dish-info">
                         <div class="dish-badge">Lựa chọn 2</div>
-                        <h3 class="dish-name">Bún Gạo Lứt Xào Rau Củ & Đậu Hũ</h3>
-                        <div class="dish-tags"><span class="tag">Thơm ngon</span><span class="tag">Nhiều rau</span></div>
+                        <h3 class="dish-name">Miến Lứt Nấu Nấm Đông Cô & Mộc Nhĩ</h3>
+                        <div class="dish-tags"><span class="tag">Nhẹ bụng</span><span class="tag">Nước ngọt thanh</span></div>
                         <div class="dish-meta">
-                            <span>⏱️ 20 phút</span>
-                            <span>🍽️ 1 tô (80g bún khô + 100g đậu hũ)</span>
-                            <span>🔥 420 kcal</span>
+                            <span>⏱️ 25 phút</span>
+                            <span>🍽️ 1 tô (60g miến khô)</span>
+                            <span>🔥 300 kcal</span>
                         </div>
                     </div>
                 </div>
                 <div class="dish-body">
-                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Bún lứt dai dai nhiều chất xơ, đậu hũ áp chảo thơm, rau củ giòn ngọt.</p>
+                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Nước dùng nấm ngọt thanh tự nhiên, miến mềm, mộc nhĩ giòn sần sật.</p>
                     <div class="dish-nut-grid">
-                        <div class="nut-item"><span>Tinh bột</span><strong>62g</strong></div>
-                        <div class="nut-item"><span>Đạm</span><strong>16g</strong></div>
-                        <div class="nut-item"><span>Chất xơ</span><strong>7g</strong></div>
+                        <div class="nut-item"><span>Tinh bột</span><strong>55g</strong></div>
+                        <div class="nut-item"><span>Đạm</span><strong>8g</strong></div>
+                        <div class="nut-item"><span>Chất xơ</span><strong>5g</strong></div>
                         <div class="nut-item"><span>Giá ước tính</span><strong>20,000đ</strong></div>
                     </div>
                     <div class="dish-ingredients">
-                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Bún gạo lứt, Đậu hũ trắng, Cải ngọt, Cà rốt, Nấm rơm
+                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Miến gạo lứt, Nấm đông cô, Nấm mèo, Hành boa-rô, Rau mùi
                     </div>
-                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Mua bún Mẹ nhớ lật xem thành phần — nhiều loại ghi gạo lứt mà thật ra toàn bột gạo trắng.</div>
-                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Bún 'gạo lứt' thương mại thường chỉ pha 10-20% gạo lứt, phần còn lại là bột gạo trắng GI cao.</div>
+                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Món này hơi ít đạm. Ba thêm 100g đậu hũ hoặc một nắm đậu phộng rang cho chắc bụng tới trưa.</div>
+                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Chỉ 8g đạm/phần, thấp so với nhu cầu bữa sáng của người ăn chay.</div>
+                    
+                    <div class="dish-restaurant">
+                        <div class="rest-header">
+                            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800" alt="Quán Chay Thiện Tâm" class="rest-img">
+                            <div class="rest-info">
+                                <div class="rest-title">🏬 <strong>Quán Chay Thiện Tâm</strong> <span class="rest-rating">4.5 ⭐ (490+ đánh giá)</span></div>
+                                <div class="rest-addr">📍 79 Cao Thắng, P.3, Q.3, TP.HCM</div>
+                                <div class="rest-price">💰 Giá tại quán: <strong>35.000đ - 55.000đ</strong></div>
+                                <a href="https://maps.google.com/?q=Quan+Chay+Thien+Tam+Cao+Thang+Quan+3" target="_blank" class="rest-map-btn">📍 Chỉ Đường Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             </div>
@@ -201,60 +241,86 @@
             <div class="dishes-grid">
             <div class="dish-card">
                 <div class="dish-header">
-                    <img src="https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?q=80&w=800" alt="Cơm Gạo Lứt + Đậu Bắp Luộc Chấm Tương + Canh Chua Lá Giang" class="dish-img">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800" alt="Cơm Gạo Lứt + Đậu Hũ Kho Nấm Rơm + Canh Cải Cúc" class="dish-img">
                     <div class="dish-info">
                         <div class="dish-badge">Lựa chọn 1</div>
-                        <h3 class="dish-name">Cơm Gạo Lứt + Đậu Bắp Luộc Chấm Tương + Canh Chua Lá Giang</h3>
-                        <div class="dish-tags"><span class="tag">Rất rẻ</span><span class="tag">Chua thanh</span></div>
+                        <h3 class="dish-name">Cơm Gạo Lứt + Đậu Hũ Kho Nấm Rơm + Canh Cải Cúc</h3>
+                        <div class="dish-tags"><span class="tag">Cân bằng</span><span class="tag">Nhiều rau xanh</span></div>
                         <div class="dish-meta">
-                            <span>⏱️ 30 phút</span>
-                            <span>🍽️ 1 chén cơm lứt (~100g) + 150g đậu bắp + 1 tô canh</span>
-                            <span>🔥 450 kcal</span>
+                            <span>⏱️ 35 phút</span>
+                            <span>🍽️ 1 chén cơm lứt (~100g cơm chín) + 120g đậu hũ + 1 tô canh</span>
+                            <span>🔥 520 kcal</span>
                         </div>
                     </div>
                 </div>
                 <div class="dish-body">
-                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Đậu bắp luộc xanh giòn chấm tương bần, canh chua lá giang thơm dịu.</p>
+                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Mâm cơm quen thuộc: đậu hũ kho nấm đậm đà, canh cải cúc xanh mướt.</p>
                     <div class="dish-nut-grid">
-                        <div class="nut-item"><span>Tinh bột</span><strong>60g</strong></div>
-                        <div class="nut-item"><span>Đạm</span><strong>17g</strong></div>
-                        <div class="nut-item"><span>Chất xơ</span><strong>11g</strong></div>
-                        <div class="nut-item"><span>Giá ước tính</span><strong>18,000đ</strong></div>
+                        <div class="nut-item"><span>Tinh bột</span><strong>62g</strong></div>
+                        <div class="nut-item"><span>Đạm</span><strong>22g</strong></div>
+                        <div class="nut-item"><span>Chất xơ</span><strong>9g</strong></div>
+                        <div class="nut-item"><span>Giá ước tính</span><strong>25,000đ</strong></div>
                     </div>
                     <div class="dish-ingredients">
-                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Gạo lứt, Đậu bắp, Tương bần, Lá giang, Đậu hũ trắng, Cà chua
+                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Gạo lứt, Đậu hũ trắng, Nấm rơm, Rau cải cúc, Nấm kim châm
                     </div>
-                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Đậu bắp luộc 3-4 phút vừa chín tới thôi, luộc nhừ là mất hết phần nhớt quý rồi.</div>
-                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Chất nhầy (mucilage) của đậu bắp làm chậm hấp thu glucose ở ruột; nhiệt quá lâu sẽ phá vỡ.</div>
+                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Kho nhạt thôi Mẹ, tối đa một muỗng cà phê nước tương cho mỗi phần.</div>
+                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Muối cao gây gánh nặng cho gan và huyết áp. Mục tiêu dưới 5g muối/ngày cho cả nhà.</div>
+                    
+                    <div class="dish-restaurant">
+                        <div class="rest-header">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800" alt="Nhà Hàng Chay Hum Vegetarian" class="rest-img">
+                            <div class="rest-info">
+                                <div class="rest-title">🏬 <strong>Nhà Hàng Chay Hum Vegetarian</strong> <span class="rest-rating">4.9 ⭐ (2.4k+ đánh giá)</span></div>
+                                <div class="rest-addr">📍 32 Võ Văn Tần, P.6, Q.3, TP.HCM</div>
+                                <div class="rest-price">💰 Giá tại quán: <strong>65.000đ - 120.000đ</strong></div>
+                                <a href="https://maps.google.com/?q=Hum+Vegetarian+Vo+Van+Tan+Quan+3" target="_blank" class="rest-map-btn">📍 Chỉ Đường Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="dish-card">
                 <div class="dish-header">
-                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800" alt="Cơm Gạo Lứt + Rau Lang Luộc & Nấm Kho Tiêu + Canh Rau Đay Mướp" class="dish-img">
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800" alt="Cơm Gạo Lứt + Chả Đậu Xanh Hấp Lá Chuối + Canh Bầu Đậu Phộng" class="dish-img">
                     <div class="dish-info">
                         <div class="dish-badge">Lựa chọn 2</div>
-                        <h3 class="dish-name">Cơm Gạo Lứt + Rau Lang Luộc & Nấm Kho Tiêu + Canh Rau Đay Mướp</h3>
-                        <div class="dish-tags"><span class="tag">Rẻ nhất</span><span class="tag">Vườn nhà</span></div>
+                        <h3 class="dish-name">Cơm Gạo Lứt + Chả Đậu Xanh Hấp Lá Chuối + Canh Bầu Đậu Phộng</h3>
+                        <div class="dish-tags"><span class="tag">Tự làm</span><span class="tag">Không phụ gia</span></div>
                         <div class="dish-meta">
-                            <span>⏱️ 30 phút</span>
-                            <span>🍽️ 1 chén cơm lứt (~100g) + 1 đĩa rau lang + 1 tô canh</span>
-                            <span>🔥 430 kcal</span>
+                            <span>⏱️ 45 phút</span>
+                            <span>🍽️ 1 chén cơm lứt (~100g) + 2 miếng chả + 1 tô canh</span>
+                            <span>🔥 490 kcal</span>
                         </div>
                     </div>
                 </div>
                 <div class="dish-body">
-                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Mâm cơm quê rẻ nhất bộ: rau lang luộc ngọt, nấm kho tiêu cay ấm, canh rau đay mướp.</p>
+                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Chả đậu xanh nhà làm hấp trong lá chuối thơm nức, canh bầu nấu đậu phộng ngọt bùi.</p>
                     <div class="dish-nut-grid">
-                        <div class="nut-item"><span>Tinh bột</span><strong>58g</strong></div>
-                        <div class="nut-item"><span>Đạm</span><strong>15g</strong></div>
-                        <div class="nut-item"><span>Chất xơ</span><strong>10g</strong></div>
-                        <div class="nut-item"><span>Giá ước tính</span><strong>15,000đ</strong></div>
+                        <div class="nut-item"><span>Tinh bột</span><strong>60g</strong></div>
+                        <div class="nut-item"><span>Đạm</span><strong>19g</strong></div>
+                        <div class="nut-item"><span>Chất xơ</span><strong>9g</strong></div>
+                        <div class="nut-item"><span>Giá ước tính</span><strong>20,000đ</strong></div>
                     </div>
                     <div class="dish-ingredients">
-                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Gạo lứt, Rau lang, Nấm rơm, Tiêu, Rau đay, Mướp hương
+                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Gạo lứt, Đậu xanh cà vỏ, Nấm mèo, Lá chuối, Bầu, Đậu phộng
                     </div>
-                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Rau lang Mẹ chọn đọt non, luộc xong vắt chút chanh là ngon hết ý.</div>
+                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Đậu phộng chọn hạt còn nguyên, không mốc, cắn thử không đắng. Hạt nào nghi ngờ thì bỏ liền.</div>
+                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Đậu phộng/bắp mốc sinh aflatoxin B1 — độc tố gây ung thư gan hàng đầu tại Việt Nam, đặc biệt nguy hiểm với người đã có tổn thương gan. Bảo quản hạt trong tủ lạnh.</div>
+                    
+                    <div class="dish-restaurant">
+                        <div class="rest-header">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800" alt="Chay Đạt Mộc" class="rest-img">
+                            <div class="rest-info">
+                                <div class="rest-title">🏬 <strong>Chay Đạt Mộc</strong> <span class="rest-rating">4.7 ⭐ (420+ đánh giá)</span></div>
+                                <div class="rest-addr">📍 168 Điện Biên Phủ, P.17, Q. Bình Thạnh, TP.HCM</div>
+                                <div class="rest-price">💰 Giá tại quán: <strong>35.000đ - 65.000đ</strong></div>
+                                <a href="https://maps.google.com/?q=Chay+Dat+Moc+Dien+Bien+Phu+Binh+Thanh" target="_blank" class="rest-map-btn">📍 Chỉ Đường Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -266,60 +332,86 @@
             <div class="dishes-grid">
             <div class="dish-card">
                 <div class="dish-header">
-                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800" alt="Gỏi Rau Càng Cua Nấm Mèo & Đậu Phộng + Cháo Đậu Đỏ" class="dish-img">
+                    <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=800" alt="Súp Nấm Thập Cẩm & Bắp Non" class="dish-img">
                     <div class="dish-info">
                         <div class="dish-badge">Lựa chọn 1</div>
-                        <h3 class="dish-name">Gỏi Rau Càng Cua Nấm Mèo & Đậu Phộng + Cháo Đậu Đỏ</h3>
-                        <div class="dish-tags"><span class="tag">Rất rẻ</span><span class="tag">Món hè</span></div>
+                        <h3 class="dish-name">Súp Nấm Thập Cẩm & Bắp Non</h3>
+                        <div class="dish-tags"><span class="tag">Rất nhẹ</span><span class="tag">Ấm bụng</span></div>
                         <div class="dish-meta">
-                            <span>⏱️ 20 phút</span>
-                            <span>🍽️ 1 đĩa gỏi (200g rau) + 1 chén cháo đậu đỏ</span>
-                            <span>🔥 340 kcal</span>
+                            <span>⏱️ 30 phút</span>
+                            <span>🍽️ 1 tô lớn ~400ml</span>
+                            <span>🔥 260 kcal</span>
                         </div>
                     </div>
                 </div>
                 <div class="dish-body">
-                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Gỏi rau càng cua mọng nước trộn nấm mèo giòn, rắc đậu phộng rang, ăn với cháo đậu đỏ.</p>
+                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Súp sánh nhẹ với nấm tuyết, nấm đông cô, bắp non giòn ngọt — ấm bụng trước khi ngủ.</p>
                     <div class="dish-nut-grid">
-                        <div class="nut-item"><span>Tinh bột</span><strong>40g</strong></div>
-                        <div class="nut-item"><span>Đạm</span><strong>13g</strong></div>
-                        <div class="nut-item"><span>Chất xơ</span><strong>9g</strong></div>
-                        <div class="nut-item"><span>Giá ước tính</span><strong>15,000đ</strong></div>
+                        <div class="nut-item"><span>Tinh bột</span><strong>30g</strong></div>
+                        <div class="nut-item"><span>Đạm</span><strong>10g</strong></div>
+                        <div class="nut-item"><span>Chất xơ</span><strong>6g</strong></div>
+                        <div class="nut-item"><span>Giá ước tính</span><strong>22,000đ</strong></div>
                     </div>
                     <div class="dish-ingredients">
-                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Rau càng cua, Nấm mèo, Đậu phộng, Chanh, Đậu đỏ, Gạo lứt
+                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Nấm tuyết, Nấm đông cô, Bắp non, Cà rốt, Hành boa-rô, Bột năng
                     </div>
-                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Nước trộn gỏi dùng chanh với nước tương nhạt thôi, không cần đường. Đậu phộng phải mới rang.</div>
-                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Đậu phộng mốc sinh aflatoxin B1 — độc tố gây ung thư gan hàng đầu. Đường trong nước trộn gỏi làm mất ý nghĩa của cả món.</div>
+                    <div class="dish-note"><strong>🐾 Gấu dặn nhỏ:</strong> Món này nhẹ quá, con sợ Ba đói đêm — thêm 100g đậu hũ non cho chắc bụng.</div>
+                    <div class="dish-medical"><strong>🩺 Ghi chú y học:</strong> Chỉ 10g đạm và 260 kcal — không đủ làm bữa chính nếu không bổ sung.</div>
+                    
+                    <div class="dish-restaurant">
+                        <div class="rest-header">
+                            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800" alt="Quán Chay Thiện Tĩnh" class="rest-img">
+                            <div class="rest-info">
+                                <div class="rest-title">🏬 <strong>Quán Chay Thiện Tĩnh</strong> <span class="rest-rating">4.6 ⭐ (610+ đánh giá)</span></div>
+                                <div class="rest-addr">📍 95 Nguyễn Trãi, P.2, Q.5, TP.HCM</div>
+                                <div class="rest-price">💰 Giá tại quán: <strong>35.000đ - 60.000đ</strong></div>
+                                <a href="https://maps.google.com/?q=Quan+Chay+Thien+Tinh+Nguyen+Trai+Quan+5" target="_blank" class="rest-map-btn">📍 Chỉ Đường Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="dish-card">
                 <div class="dish-header">
-                    <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?q=80&w=800" alt="Bí Đao Nhồi Đậu Hũ Nấm Hấp + Cháo Yến Mạch Loãng" class="dish-img">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800" alt="Cơm Hạt Kê + Đậu Hũ Hấp Tía Tô + Canh Mồng Tơi Nấm" class="dish-img">
                     <div class="dish-info">
                         <div class="dish-badge">Lựa chọn 2</div>
-                        <h3 class="dish-name">Bí Đao Nhồi Đậu Hũ Nấm Hấp + Cháo Yến Mạch Loãng</h3>
-                        <div class="dish-tags"><span class="tag">Bữa tối nhẹ</span><span class="tag">Thanh mát</span></div>
+                        <h3 class="dish-name">Cơm Hạt Kê + Đậu Hũ Hấp Tía Tô + Canh Mồng Tơi Nấm</h3>
+                        <div class="dish-tags"><span class="tag">Bữa tối nhẹ</span><span class="tag">Thơm tía tô</span></div>
                         <div class="dish-meta">
-                            <span>⏱️ 35 phút</span>
-                            <span>🍽️ 3-4 khoanh bí đao nhồi + 1 chén cháo loãng (25g yến mạch)</span>
-                            <span>🔥 320 kcal</span>
+                            <span>⏱️ 30 phút</span>
+                            <span>🍽️ 2/3 chén cơm (~70g) + 120g đậu hũ + 1 tô canh</span>
+                            <span>🔥 400 kcal</span>
                         </div>
                     </div>
                 </div>
                 <div class="dish-body">
-                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Khoanh bí đao trong veo nhồi đậu hũ nấm, thêm chén cháo yến mạch loãng ấm bụng.</p>
+                    <p class="dish-desc"><strong>💡 Mô tả & Công dụng:</strong> Đậu hũ hấp lá tía tô thơm dịu, canh mồng tơi nấu nấm mát ruột, cơm hạt kê bùi.</p>
                     <div class="dish-nut-grid">
-                        <div class="nut-item"><span>Tinh bột</span><strong>36g</strong></div>
-                        <div class="nut-item"><span>Đạm</span><strong>16g</strong></div>
-                        <div class="nut-item"><span>Chất xơ</span><strong>7g</strong></div>
+                        <div class="nut-item"><span>Tinh bột</span><strong>45g</strong></div>
+                        <div class="nut-item"><span>Đạm</span><strong>18g</strong></div>
+                        <div class="nut-item"><span>Chất xơ</span><strong>8g</strong></div>
                         <div class="nut-item"><span>Giá ước tính</span><strong>20,000đ</strong></div>
                     </div>
                     <div class="dish-ingredients">
-                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Bí đao, Đậu hũ trắng, Nấm mèo, Nấm hương, Yến mạch, Hành ngò
+                        <strong>🛒 Nguyên liệu chuẩn bị:</strong> Hạt kê, Gạo lứt, Đậu hũ non, Lá tía tô, Rau mồng tơi, Nấm rơm
                     </div>
                     
+                    
+                    
+                    <div class="dish-restaurant">
+                        <div class="rest-header">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800" alt="Nhà Hàng Chay Bồ Đề Ngọc Xanh" class="rest-img">
+                            <div class="rest-info">
+                                <div class="rest-title">🏬 <strong>Nhà Hàng Chay Bồ Đề Ngọc Xanh</strong> <span class="rest-rating">4.7 ⭐ (910+ đánh giá)</span></div>
+                                <div class="rest-addr">📍 23 đường 3/2, P.11, Q.10, TP.HCM</div>
+                                <div class="rest-price">💰 Giá tại quán: <strong>40.000đ - 75.000đ</strong></div>
+                                <a href="https://maps.google.com/?q=Chay+Bo+De+Ngoc+Xanh+3-2+Quan+10" target="_blank" class="rest-map-btn">📍 Chỉ Đường Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -330,12 +422,12 @@
         <section class="meal-section">
             <h2 class="section-title">🥤 THỨC UỐNG MÙA VỤ BỔ DƯỠNG</h2>
             <div class="drink-card">
-                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=800" alt="Trà Xanh Lá Tươi Pha Loãng" class="drink-img">
+                <img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b7?q=80&w=800" alt="Nước Ép Cần Tây & Dưa Leo" class="drink-img">
                 <div class="drink-details">
-                    <h3>Trà Xanh Lá Tươi Pha Loãng</h3>
-                    <p><strong>✨ Công dụng:</strong> Trà lá tươi chát dịu, pha loãng uống sau bữa cơm 1 tiếng là vừa.</p>
-                    <p><strong>🍵 Hướng dẫn pha chế:</strong> 1 nắm lá trà xanh tươi rửa sạch, hãm nước sôi rồi pha loãng ra.</p>
-                    <p class="cost-tag">💰 Chi phí: Rất rẻ (~2.000đ/ấm)</p>
+                    <h3>Nước Ép Cần Tây & Dưa Leo</h3>
+                    <p><strong>✨ Công dụng:</strong> Xanh mát, gần như không ngọt, uống buổi trưa nắng rất đã.</p>
+                    <p><strong>🍵 Hướng dẫn pha chế:</strong> 3 cây cần tây + 1 quả dưa leo ép lấy nước, uống ngay.</p>
+                    <p class="cost-tag">💰 Chi phí: Bình dân (~8.000đ/ly)</p>
                 </div>
             </div>
         </section>
@@ -344,10 +436,10 @@
         <section class="meal-section">
             <h2 class="section-title">🍉 TRÁNG MIỆNG GI THẤP</h2>
             <div class="fruit-card">
-                <img src="https://images.unsplash.com/photo-1536511135884-22b64d42b936?q=80&w=800" alt="Ổi" class="fruit-img">
+                <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=800" alt="Bưởi" class="fruit-img">
                 <div class="fruit-details">
-                    <h3>Ổi (1/2 quả vừa (~100g))</h3>
-                    <p>Giòn, ít ngọt, rẻ nhất chợ.</p>
+                    <h3>Bưởi (3 múi (~150g))</h3>
+                    <p>Mát, ít ngọt.</p>
                 </div>
             </div>
         </section>
