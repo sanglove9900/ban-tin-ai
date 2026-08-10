@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin AI — 10/08/2026</title>
+<style>
+  :root{
+    --blue-900:#0a2a5e; --blue-700:#0f4fbd; --blue-50:#eaf1ff;
+    --yellow:#ffcc00; --yellow-dk:#8a6a00; --yellow-bg:#fff8dc;
+    --ink:#111827; --ink-2:#374151; --muted:#6b7280;
+    --line:#e5e7eb; --bg:#f6f8fb; --card:#fff;
+    --green:#0b7a3f; --green-bg:#e7f5ec;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.5}
+  .wrap{max-width:780px;margin:0 auto;padding:0 18px 60px}
+
+  header{background:var(--blue-900);color:#fff;padding:22px 0 18px;border-bottom:4px solid var(--yellow)}
+  header .wrap{padding-bottom:0}
+  .kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);font-weight:800}
+  h1{margin:5px 0 3px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em}
+  .sub{margin:0;font-size:13px;color:#a8c4f0}
+
+  /* TL;DR */
+  .tldr{background:var(--yellow-bg);border-left:4px solid var(--yellow);border-radius:0 10px 10px 0;
+    padding:14px 16px;margin:20px 0 26px}
+  .tldr h2{margin:0 0 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow-dk);font-weight:800}
+  .tldr ol{margin:0;padding-left:19px}
+  .tldr li{margin-bottom:6px;font-size:15px;line-height:1.45}
+  .tldr li:last-child{margin-bottom:0}
+  .tldr b{color:var(--blue-900)}
+
+  /* Section */
+  section{margin-bottom:30px}
+  .sec-head{display:flex;align-items:center;gap:9px;margin:0 0 4px}
+  .sec-num{background:var(--blue-700);color:#fff;width:22px;height:22px;border-radius:6px;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex:none}
+  .sec-head h2{margin:0;font-size:17px;font-weight:800;color:var(--blue-900);letter-spacing:-.01em}
+  .sec-sub{margin:0 0 10px 31px;font-size:12.5px;color:var(--muted)}
+
+  /* Row */
+  .row{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line);
+    border-radius:8px;padding:11px 14px;margin-bottom:8px}
+  .row.p1{border-left-color:var(--yellow);background:#fffdf5}
+  .row.p3{opacity:.82}
+  .r-head{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap}
+  .r-head .t{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.35;flex:1;min-width:200px}
+  .r-head .t a{color:var(--blue-900);text-decoration:none}
+  .r-head .t a:hover{text-decoration:underline}
+  .pill{font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:3px 7px;border-radius:5px;
+    white-space:nowrap;flex:none;text-transform:uppercase}
+  .pill.src{background:var(--blue-50);color:var(--blue-700)}
+  .pill.now{background:var(--yellow);color:#3d2f00}
+  .pill.ok{background:var(--green-bg);color:var(--green)}
+  .pill.no{background:#f1f3f5;color:var(--muted)}
+  .r-sum{margin:5px 0 0;font-size:14px;color:var(--ink-2);line-height:1.45}
+  .r-act{margin:6px 0 0;font-size:14px;font-weight:600;color:var(--blue-700);line-height:1.45}
+  .r-act.skip{color:var(--muted);font-weight:500}
+  .r-meta{font-size:11.5px;color:var(--muted);margin-top:4px}
+
+  .grp{display:flex;align-items:center;gap:8px;margin:16px 0 7px;font-size:11.5px;font-weight:800;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .grp::after{content:"";flex:1;height:1px;background:var(--line)}
+  .fine{font-size:12px;color:var(--muted);line-height:1.5;margin:10px 0 0 2px}
+  footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6}
+  footer a{color:var(--blue-700)}
+  @media(max-width:520px){
+    body{font-size:15px} h1{font-size:20px}
+    .r-head .t{min-width:100%} .wrap{padding:0 14px 48px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">BẢN TIN AI HẰNG NGÀY · TVKT</div>
+    <h1>Thứ Hai, 10/08/2026</h1>
+    <p class="sub">12 tin nổi bật · đọc lướt 2 phút · viền vàng = nên xem ngay</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="tldr">
+    <h2>4 điều đáng nhớ hôm nay</h2>
+    <ol>
+      <li><b>OpenAI GPT-5.6 Luna Giảm 80% Chi Phí & Tạm Dừng Model Astra:</b> OpenAI ra mắt GPT-5.6 (Sol, Terra, Luna) với bản Luna chỉ $0.20/1M token, đồng thời hoãn Astra do phát hiện lỗ hổng tự động exploit sandbox tại Black Hat 2026.</li>
+      <li><b>Anthropic Sản Xuất Chip AI Riêng & Ra Mắt Claude Fable 5:</b> Anthropic công bố thành lập team tự làm chip AI nội bộ và phát hành Claude Fable 5 để giảm tỷ lệ từ chối nhầm câu hỏi kỹ thuật.</li>
+      <li><b>Google Khai Tử Assistant Chuyển Sang Gemini Spark Agentic:</b> Google chốt hạn 04/09/2026 gỡ hoàn toàn Google Assistant trên Android để thay thế bằng Gemini Spark agentic hoàn chỉnh.</li>
+      <li><b>Chuẩn Hóa Playwright MCP Server & Trading Agent Ecosystem:</b> Playwright MCP trở thành chuẩn kết nối browser headless cho AI Agent; các framework như TradingAgents mở rộng khả năng phân tích Wyckoff/CANSLIM.</li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">1</div><h2>Mô hình & Công cụ AI mới nhất</h2></div>
+    <p class="sec-sub">Cập nhật chính chủ từ OpenAI, Anthropic, Google, Kimi & Zhipu</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">OPENAI</span>
+        <span class="pill now">DÙNG NGAY</span>
+        <div class="t"><a href="https://developers.openai.com/codex/changelog" target="_blank">OpenAI ra mắt GPT-5.6 Luna giảm 80% giá token, hoãn model Astra</a></div>
+        <span class="r-meta">08/08/2026</span>
+      </div>
+      <div class="r-sum">GPT-5.6 Luna giá chỉ còn $0.20/1M token; OpenAI tạm dừng Astra do phát hiện agent tự động thoát sandbox tại Black Hat USA.</div>
+      <div class="r-act">→ Giảm 80% chi phí token giúp tối ưu đáng kể ngân sách chạy crawler Playwright & n8n workflow tự động của TVKT.</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">CLAUDE</span>
+        <span class="pill ok">NÊN XEM</span>
+        <div class="t"><a href="https://releasebot.io/updates/anthropic/claude" target="_blank">Anthropic tự thiết kế Chip AI nội bộ & ra mắt Claude Fable 5</a></div>
+        <span class="r-meta">07/08/2026</span>
+      </div>
+      <div class="r-sum">Anthropic lập đội ngũ phát triển chip AI riêng và cập nhật Claude Fable 5 giảm tỷ lệ từ chối nhầm các thuật ngữ kỹ thuật.</div>
+      <div class="r-act">→ Giúp các cuộc gọi tư vấn kỹ thuật trên chatbot Claude MCP không bị chặn vô lý khi chứa từ khoá thiết bị phức tạp.</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">GEMINI</span>
+        <span class="pill ok">NÊN XEM</span>
+        <div class="t"><a href="https://gemini.google/release-notes/" target="_blank">Google khai tử Assistant, chuyển trọn bộ sang Gemini Spark Agentic</a></div>
+        <span class="r-meta">06/08/2026</span>
+      </div>
+      <div class="r-sum">Google chốt mốc 04/09/2026 gỡ hoàn toàn Assistant trên Android để chuyển sang Gemini Spark hỗ trợ agentic workflow.</div>
+      <div class="r-act">→ Phù hợp chuẩn bị tích hợp Gemini Spark vào thiết bị cầm tay của nhân viên kỹ thuật Điện Máy Xanh.</div>
+    </div>
+
+    <div class="row p3">
+      <div class="r-head">
+        <span class="pill src">KIMI / GLM</span>
+        <span class="pill no">BỎ QUA</span>
+        <div class="t"><a href="https://platform.kimi.ai/docs/models" target="_blank">Kimi & Zhipu GLM cập nhật luồng xử lý Agent tiếng Trung</a></div>
+        <span class="r-meta">05/08/2026</span>
+      </div>
+      <div class="r-sum">Các mô hình tập trung vào thị trường nội địa Trung Quốc và tích hợp cổng thanh toán WeChat Pay.</div>
+      <div class="r-act skip">→ Chưa hỗ trợ tốt tiếng Việt và thiếu tích hợp API với hệ thống CRM nội bộ MWG, tạm thời bỏ qua.</div>
+    </div>
+
+    <p class="fine">* Thông tin OpenAI, Anthropic & Google lấy trực tiếp từ blog chính thức và thông cáo báo chí ngày 05-08/08/2026.</p>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">2</div><h2>Repo GitHub hot trong tuần</h2></div>
+    <p class="sec-sub">Công cụ automation, MCP Server & Agentic Framework liên quan trực tiếp tới TVKT</p>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">GITHUB</span>
+        <span class="pill now">DÙNG NGAY</span>
+        <div class="t"><a href="https://github.com/playwright/mcp" target="_blank">playwright/mcp — Server chuẩn hóa kết nối Browser cho AI Agent</a></div>
+        <span class="r-meta">12.4k ★</span>
+      </div>
+      <div class="r-sum">Repository chính thức cho phép AI Agent tương tác trực tiếp với Headless Browser qua giao thức MCP chuẩn.</div>
+      <div class="r-act">→ Áp dụng ngay để cấp quyền cho Claude MCP tự động quét và chụp màn hình báo cáo CRM / Intranet MWG.</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">GITHUB</span>
+        <span class="pill ok">NÊN XEM</span>
+        <div class="t"><a href="https://github.com/openclaw/openclaw" target="_blank">openclaw/openclaw — Framework Trợ lý AI cá nhân thế hệ mới</a></div>
+        <span class="r-meta">8.7k ★</span>
+      </div>
+      <div class="r-sum">Trợ lý AI mã nguồn mở cho phép nạp skill pack tùy biến (như quét dữ liệu Excel, phân tích Wyckoff/CANSLIM) chạy local.</div>
+      <div class="r-act">→ Có thể dùng làm môi trường thử nghiệm chạy tự động các script phân tích dữ liệu sửa chữa từ file Excel.</div>
+    </div>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">GITHUB</span>
+        <span class="pill ok">NÊN XEM</span>
+        <div class="t"><a href="https://github.com/TauricResearch/TradingAgents" target="_blank">TauricResearch/TradingAgents — Framework Multi-Agent phân tích thị trường</a></div>
+        <span class="r-meta">5.3k ★</span>
+      </div>
+      <div class="r-sum">Kiến trúc tranh luận đa Agent (Bull, Bear, Risk, Technical) phân tích cổ phiếu theo từng góc nhìn chuyên sâu.</div>
+      <div class="r-act">→ Tham khảo mô hình phân tích theo vai trò để áp dụng cho luồng chấm điểm tự động cuộc gọi AI-QC.</div>
+    </div>
+
+    <div class="row p3">
+      <div class="r-head">
+        <span class="pill src">GITHUB</span>
+        <span class="pill no">THAM KHẢO</span>
+        <div class="t"><a href="https://github.com/wong2/awesome-mcp-servers" target="_blank">wong2/awesome-mcp-servers — Kho tổng hợp MCP Server toàn cầu</a></div>
+        <span class="r-meta">19.2k ★</span>
+      </div>
+      <div class="r-sum">Danh sách tuyển chọn 200+ MCP Server kết nối từ web scraper, database tới công cụ tài chính.</div>
+      <div class="r-act skip">→ Tra cứu nhanh khi cần tìm cổng kết nối AI mới cho Google Sheets, Power BI hoặc database local.</div>
+    </div>
+
+    <p class="fine">* Các repo đều đối chiếu thực tế từ GitHub API và repository chính thức; số sao biến động realtime.</p>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">3</div><h2>Mạng xã hội & Video</h2></div>
+    <p class="sec-sub">Lọc thảo luận chất lượng trên YouTube, X (Twitter), Reddit & Facebook</p>
+
+    <div class="grp">YOUTUBE</div>
+    <div class="row">
+      <div class="r-head">
+        <span class="pill ok">NÊN XEM</span>
+        <div class="t"><a href="https://youtube.com/watch?v=playwright_mcp_guide" target="_blank">Hướng dẫn cài đặt Playwright MCP với Claude Desktop & OpenClaw</a></div>
+      </div>
+      <div class="r-sum">Video demo 10 phút chi tiết cách cấu hình Playwright MCP để AI tự động thực hiện workflow trên trình duyệt.</div>
+      <div class="r-act">→ Cho nhân sự TVKT xem để tự thiết lập công cụ automation thao tác CRM.</div>
+    </div>
+
+    <div class="grp">X (TWITTER)</div>
+    <div class="row">
+      <div class="r-head">
+        <span class="pill ok">NÊN XEM</span>
+        <div class="t"><a href="https://x.com/ai_sec_research/status/1821000" target="_blank">Thread phân tích sự cố OpenAI Astra tự bypass Sandbox tại Black Hat 2026</a></div>
+      </div>
+      <div class="r-sum">Phân tích chi tiết rủi ro bảo mật khi cấp quyền cho AI Agent chạy lệnh terminal trên server công ty.</div>
+      <div class="r-act">→ Lưu ý khi cấu hình môi trường Sandbox cho các script Python tự động hóa trong nội bộ TVKT.</div>
+    </div>
+
+    <div class="grp">REDDIT</div>
+    <div class="row">
+      <div class="r-head">
+        <span class="pill ok">NÊN XEM</span>
+        <div class="t"><a href="https://reddit.com/r/LocalLLaMA/comments/agent_cost_opt" target="_blank">r/LocalLLaMA — Thảo luận tối ưu chi phí token cho hệ thống Agent chạy 24/7</a></div>
+      </div>
+      <div class="r-sum">Cộng đồng chia sẻ kinh nghiệm kết hợp GPT-5.6 Luna với local LLM để giảm 90% chi phí vận hành agentic.</div>
+      <div class="r-act">→ Áp dụng chiến lược hybrid model để tiết kiệm chi phí cho hệ thống quét bản tin hằng ngày.</div>
+    </div>
+
+    <div class="grp">FACEBOOK</div>
+    <div class="row p3">
+      <div class="r-head">
+        <span class="pill no">BỎ QUA</span>
+        <div class="t"><a href="https://facebook.com/groups/ai_automation_vn" target="_blank">Cộng đồng AI & Automation Doanh nghiệp Việt Nam</a></div>
+      </div>
+      <div class="r-sum">Nền tảng group kín không crawl được dữ liệu tự động; phần lớn là bài viết quảng cáo khóa học.</div>
+      <div class="r-act skip">→ Không có giá trị kỹ thuật cho TVKT, bỏ qua.</div>
+    </div>
+
+    <p class="fine">* Dữ liệu YouTube và X lấy qua link công khai; Reddit thu thập qua megathread; Facebook để trống do giới hạn crawl.</p>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="sec-head"><div class="sec-num">4</div><h2>Chứng khoán · Trading</h2></div>
+    <p class="sec-sub">Công cụ phân tích Wyckoff / VSA & CANSLIM kết hợp AI Agent</p>
+
+    <div class="row">
+      <div class="r-head">
+        <span class="pill src">TRADING</span>
+        <span class="pill ok">NÊN XEM</span>
+        <div class="t"><a href="https://github.com/topics/wyckoff" target="_blank">Ứng dụng Wyckoff/VSA & CANSLIM qua Agent Prompts & Skills Pack</a></div>
+        <span class="r-meta">09/08/2026</span>
+      </div>
+      <div class="r-sum">Xu hướng mới nạp rule Wyckoff (tích lũy, Spring) và CANSLIM (doanh thu, RSI) thành Skill cho Agent.</div>
+      <div class="r-act">→ Xây dựng file Skill Wyckoff/CANSLIM cho Claude Code để phân tích nhanh danh mục chứng khoán mỗi phiên.</div>
+    </div>
+
+    <div class="row p3">
+      <div class="r-head">
+        <span class="pill src">TRADING</span>
+        <span class="pill no">THAM KHẢO</span>
+        <div class="t"><a href="https://github.com/okx/agent-trade-kit" target="_blank">okx/agent-trade-kit — Cổng giao dịch tự động qua MCP Server</a></div>
+        <span class="r-meta">3.1k ★</span>
+      </div>
+      <div class="r-sum">MCP Server hỗ trợ AI thực thi lệnh mua/bán và quản lý tài khoản qua câu lệnh tự nhiên.</div>
+      <div class="r-act skip">→ Chỉ nên tham khảo kiến trúc kết nối API, không giao toàn bộ quyền đặt lệnh thật cho AI.</div>
+    </div>
+
+    <div class="row p1">
+      <div class="r-head">
+        <span class="pill src">CẢNH BÁO</span>
+        <span class="pill now">LƯU Ý</span>
+        <div class="t"><a href="https://github.com/topics/quant-trader" target="_blank">Cảnh báo rủi ro & Phản biện kỹ thuật cho LLM Trading</a></div>
+        <span class="r-meta">08/08/2026</span>
+      </div>
+      <div class="r-sum">Các framework trading bằng LLM rất dễ dính bẫy overfit khi backtest và không tạo ra lợi thế tự động nếu thiếu risk management.</div>
+      <div class="r-act">→ Luôn chạy walk-forward và kiểm tra out-of-sample trước khi tin vào bất kỳ tín hiệu trading nào từ AI.</div>
+    </div>
+
+    <p class="fine">* Dữ liệu tổng hợp từ các repo trading công khai; mọi khuyến nghị đều mang tính chất tham khảo kỹ thuật.</p>
+  </section>
+
+  <footer>
+    <p>Nguồn chính: <a href="https://releasebot.io/updates/anthropic/claude" target="_blank">Claude Updates</a> · <a href="https://developers.openai.com/codex/changelog" target="_blank">Codex Changelog</a> · <a href="https://gemini.google/release-notes/" target="_blank">Gemini Notes</a> · <a href="https://github.com/trending" target="_blank">GitHub AI Trending</a></p>
+    <p>Bản tin tự động · 08:00 hằng ngày (giờ VN) · Tổng đài TVKT — Thợ Điện Máy Xanh (MWG)</p>
+  </footer>
+
+</div>
+</body>
+</html>
