@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Đơn Cơm Nhà 15 Phút — 18/08/2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B00;
+            --primary-dark: #E63946;
+            --bg-warm: #FFF9F5;
+            --card-bg: #FFFFFF;
+            --text-dark: #1F2937;
+            --text-muted: #6B7280;
+            --border-light: #FFE4D6;
+            --accent-gold: #FFC107;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #FFFFFF;
+            padding: 36px 20px 28px;
+            text-align: center;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 10px 25px rgba(255, 107, 0, 0.25);
+        }
+        .header-sub { font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #FFE3D6; text-transform: uppercase; }
+        .header-title { font-size: 26px; font-weight: 800; margin: 8px 0; }
+        .header-desc { font-size: 14px; opacity: 0.95; max-width: 600px; margin: 0 auto; }
+        
+        .container { max-width: 800px; margin: 20px auto; padding: 0 16px; }
+        .meal-section { margin-bottom: 32px; }
+        .section-title { font-size: 18px; font-weight: 800; color: var(--primary-dark); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        
+        .dishes-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .dish-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+        .dish-header { display: flex; gap: 16px; padding: 16px; border-bottom: 1px dashed var(--border-light); }
+        .dish-img { width: 100px; height: 100px; border-radius: 12px; object-fit: cover; flex-shrink: 0; }
+        .dish-img-placeholder { width: 100px; height: 100px; border-radius: 12px; background: #FFEDD5; display: flex; align-items: center; justify-content: center; font-size: 40px; flex-shrink: 0; }
+        .dish-info { flex: 1; }
+        .dish-badge { display: inline-block; background: #FFF0E6; color: var(--primary); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; margin-bottom: 4px; }
+        .dish-name { font-size: 17px; font-weight: 800; color: var(--text-dark); margin-bottom: 6px; }
+        .dish-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+        .tag { background: #FFF7ED; color: #C2410C; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; }
+        .dish-meta { display: flex; gap: 12px; font-size: 12px; font-weight: 600; color: var(--text-muted); }
+        
+        .dish-body { padding: 16px; font-size: 13px; }
+        .dish-desc { margin-bottom: 10px; color: #4B5563; }
+        .dish-tip { background: #FFFBEB; border-left: 4px solid var(--accent-gold); padding: 10px 12px; border-radius: 6px; font-size: 12px; color: #92400E; margin-bottom: 12px; }
+        .dish-ingredients { background: #F9FAFB; padding: 10px 12px; border-radius: 8px; font-size: 12px; color: #374151; }
+        
+        .shopping-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; background: #FFFFFF; padding: 16px; border-radius: 16px; border: 1px solid var(--border-light); }
+        .shop-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #F9FAFB; border-radius: 8px; cursor: pointer; user-select: none; transition: 0.2s; }
+        .shop-item.checked { background: #ECFDF5; text-decoration: line-through; opacity: 0.7; }
+        .shop-item input { display: none; }
+        .checkmark { width: 18px; height: 18px; border: 2px solid var(--primary); border-radius: 4px; display: inline-block; position: relative; }
+        .shop-item.checked .checkmark { background: var(--primary); }
+        .shop-item.checked .checkmark:after { content: '✓'; color: white; font-size: 12px; font-weight: bold; position: absolute; top: -2px; left: 3px; }
+        .shop-name { font-size: 13px; font-weight: 600; color: var(--text-dark); }
+        .shop-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+        
+        .drink-card { display: flex; gap: 16px; background: #FFFFFF; padding: 16px; border-radius: 16px; border: 1px solid var(--border-light); }
+        .drink-img { width: 80px; height: 80px; border-radius: 12px; object-fit: cover; }
+        .drink-img-placeholder { width: 80px; height: 80px; border-radius: 12px; background: #FFF7ED; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+        .drink-details h3 { font-size: 16px; font-weight: 800; color: #C2410C; margin-bottom: 4px; }
+        .drink-details p { font-size: 12px; color: #4B5563; margin-bottom: 4px; }
+
+        .footer { text-align: center; font-size: 13px; font-weight: 700; color: var(--primary-dark); margin-top: 40px; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-sub">💖 CƠM NHÀ ẤM ÁP · Thứ Ba, 18/08/2026</div>
+        <h1 class="header-title">Hôm nay Vợ không cần nghĩ 'Ăn gì'</h1>
+        <p class="header-desc">Thực đơn cơm nhà chuẩn vị 15-20 phút · Siêu nhanh, dinh dưỡng & Kích thích vị giác</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="meal-section">
+            <h2 class="section-title">🌅 BỮA SÁNG (06:30)</h2>
+            <div class="dishes-grid">
+            <div class="dish-card">
+                <div class="dish-header">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Xôi Mặn Thập Cẩm Lạp Xưởng Trứng Cút" class="dish-img">
+                    <div class="dish-info">
+                        <div class="dish-badge">Lựa chọn 1</div>
+                        <h3 class="dish-name">Xôi Mặn Thập Cẩm Lạp Xưởng Trứng Cút</h3>
+                        <div class="dish-tags"><span class="tag">⚡ 10 phút</span><span class="tag">Nhanh gọn</span><span class="tag">No lâu</span></div>
+                        <div class="dish-meta">
+                            <span>⏱️ 10 phút</span>
+                            <span>⭐ Siêu dễ</span>
+                            <span>💰 ~25,000đ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-body">
+                    <p class="dish-desc"><strong>✨ Hương vị & Đặc trưng:</strong> Xôi dẻo thơm rưới sốt thịt đậm đà, lạp xưởng chiên giòn, chà bông và mỡ hành thơm nức.</p>
+                    <div class="dish-tip">💡 <strong>Mẹo bí kíp ngon chuẩn tiệm:</strong> Chiên lạp xưởng bằng chút nước lọc thay vì dầu ăn giúp lạp xưởng mềm mọng không bị khô!</div>
+                    <div class="dish-ingredients">
+                        <strong>🛒 Nguyên liệu:</strong> Nếp thơm, Lạp xưởng, Trứng cút, Chà bông, Mỡ hành
+                    </div>
+                    <div class="dish-note"><strong>💖 Lời nhắn gia đình:</strong> Món ăn sáng quốc dân no lâu cho cả ngày làm việc năng lượng.</div>
+                    
+                </div>
+            </div>
+            
+            <div class="dish-card">
+                <div class="dish-header">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800" alt="Bánh Mì Nguyên Cám Kẹp Bơ & Nấm Sốt Cà" class="dish-img">
+                    <div class="dish-info">
+                        <div class="dish-badge">Lựa chọn 2</div>
+                        <h3 class="dish-name">Bánh Mì Nguyên Cám Kẹp Bơ & Nấm Sốt Cà</h3>
+                        <div class="dish-tags"><span class="tag">Nhanh gọn</span><span class="tag">Béo bùi</span></div>
+                        <div class="dish-meta">
+                            <span>⏱️ 15 phút</span>
+                            <span>⭐ Siêu Dễ</span>
+                            <span>💰 ~25,000đ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-body">
+                    <p class="dish-desc"><strong>✨ Hương vị & Đặc trưng:</strong> Bánh mì đen dai thơm, bơ quả béo mịn, nấm sốt cà chua đậm đà.</p>
+                    <div class="dish-tip">💡 <strong>Mẹo bí kíp ngon chuẩn tiệm:</strong> Chọn ổ nào ghi 'nguyên cám 100%' ở dòng thành phần đầu tiên Mẹ nhé.</div>
+                    <div class="dish-ingredients">
+                        <strong>🛒 Nguyên liệu:</strong> Bánh mì đen nguyên cám, Bơ quả, Nấm đùi gà, Cà chua
+                    </div>
+                    <div class="dish-note"><strong>💖 Lời nhắn gia đình:</strong> Chọn ổ nào ghi 'nguyên cám 100%' ở dòng thành phần đầu tiên Mẹ nhé.</div>
+                    
+                    <div class="dish-restaurant">
+                        <div class="rest-header">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800" alt="Kashew Cheese Organic Bakery" class="rest-img">
+                            <div class="rest-info">
+                                <div class="rest-title">🏬 <strong>Kashew Cheese Organic Bakery</strong> <span class="rest-rating">4.8 ⭐ (620+ đánh giá)</span></div>
+                                <div class="rest-addr">📍 14 Trần Ngọc Diện, Thảo Điền, Q.2, TP.HCM</div>
+                                <div class="rest-price">💰 Giá tại quán: <strong>45.000đ - 85.000đ</strong></div>
+                                <a href="https://maps.google.com/?q=Kashew+Cheese+Thao+Dien+Quan+2" target="_blank" class="rest-map-btn">📍 Chỉ Đường Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        
+        <section class="meal-section">
+            <h2 class="section-title">🍹 THỨC UỐNG MÙA VỤ BỔ DƯỠNG</h2>
+            <div class="drink-card">
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=800" alt="Sữa Đậu Nành Không Đường Tự Nấu" class="drink-img">
+                <div class="drink-details">
+                    <h3>Sữa Đậu Nành Không Đường Tự Nấu</h3>
+                    <p><strong>✨ Công dụng:</strong> Béo thơm, bù đạm rất tốt cho nhà mình ăn chay (~7g đạm mỗi 200ml).</p>
+                    <p><strong>🍵 Pha chế nhanh:</strong> 80g đậu nành ngâm 8 tiếng, xay với 1 lít nước, lọc, đun sôi kỹ 10 phút. Không cho đường.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+    <section class="meal-section">
+        <h2 class="section-title">🛒 DANH SÁCH ĐI CHỢ 1 TRẠM (TICK BẮT MUA)</h2>
+        <p class="shop-sub">Vợ đi chợ chỉ cần chạm vào các ô để tick chọn đồ đã mua nhé 💖</p>
+        <div class="shopping-grid">
+        <label class="shop-item">
+            <input type="checkbox" onclick="this.parentElement.classList.toggle('checked')">
+            <span class="checkmark"></span>
+            <span class="shop-name">Nếp thơm</span>
+        </label>
+        
+        <label class="shop-item">
+            <input type="checkbox" onclick="this.parentElement.classList.toggle('checked')">
+            <span class="checkmark"></span>
+            <span class="shop-name">Lạp xưởng</span>
+        </label>
+        
+        <label class="shop-item">
+            <input type="checkbox" onclick="this.parentElement.classList.toggle('checked')">
+            <span class="checkmark"></span>
+            <span class="shop-name">Trứng cút</span>
+        </label>
+        
+        <label class="shop-item">
+            <input type="checkbox" onclick="this.parentElement.classList.toggle('checked')">
+            <span class="checkmark"></span>
+            <span class="shop-name">Chà bông</span>
+        </label>
+        
+        <label class="shop-item">
+            <input type="checkbox" onclick="this.parentElement.classList.toggle('checked')">
+            <span class="checkmark"></span>
+            <span class="shop-name">Mỡ hành</span>
+        </label>
+        </div>
+    </section>
+    
+    </main>
+
+    <footer class="footer">
+        Chồng thương Vợ yêu · Chúc gia đình mình ăn ngon miệng! 💖
+    </footer>
+
+</body>
+</html>
